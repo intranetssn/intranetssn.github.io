@@ -1,0 +1,1021 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+
+<!-- Mirrored from www.ssn.net/twiki/bin/view/CseIntranet/CseUnitTests by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Feb 2018 08:19:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-15" /><!-- /Added by HTTrack -->
+<head>
+<title> CseUnitTests &lt; CseIntranet &lt; SSN Institutions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15" />
+<link rel="icon" href="http://www.ssn.net/twiki/pub/CseIntranet/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.ssn.net/twiki/pub/CseIntranet/WebPreferences/favicon.ico" type="image/x-icon" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="WebRss" />
+<base ></base>
+
+<script type="text/javascript" src="http://www.ssn.net/twiki/pub/TWiki/TWikiJavascripts/twiki.js"></script>
+<script type="text/javascript" src="http://www.ssn.net/twiki/pub/TWiki/PatternSkin/pattern.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	function launchWindow(inWeb, inTopic) {
+		return launchTheWindow("http://www.ssn.net/twiki/bin/view/", inWeb, inTopic, "", "viewplain" );
+	}
+//]]>
+</script>
+
+
+
+
+<style type="text/css" media="all">
+	#patternTopBar,
+#patternClearHeaderCenter,
+#patternClearHeaderLeft,
+#patternClearHeaderRight,
+#patternTopBarContentsOuter {
+	height:64px; /* top bar height; make room for header columns */
+	overflow:hidden;
+}
+	#patternOuter {
+	margin-left:12em;
+}
+#patternLeftBar {
+	width:12em;
+	margin-left:-12em;
+}
+</style>
+<style type="text/css" media="all">
+	@import url('http://www.ssn.net/twiki/pub/TWiki/PatternSkin/layout.css');
+	@import url('http://www.ssn.net/twiki/pub/TWiki/PatternSkin/style.css');
+	@import url('http://www.ssn.net/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<!--[if IE]>
+<style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style>
+<![endif]-->
+
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	#patternLeftBar .patternWebIndicator,
+	.patternBookView .twikiTopRow {
+		background-color:#33CCFF;
+	}
+	#patternTopBar { background-image:url("http://www.ssn.net/twiki/pub/SsnIntranet/SsnLogos/csebar.jpg"); background-repeat:no-repeat;}
+	#patternTopBar { background-color:#ffffff;}
+	.patternBookView {
+		border-color:#33CCFF;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+	.twikiTable .tableSortIcon img {visibility:hidden;}
+	.twikiTable .tableSortUp {background:url("http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/tablesortup.gif") no-repeat;}
+	.twikiTable .tableSortDown {background:url("http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/tablesortdown.gif") no-repeat;}
+	.twikiTable .tableSortDiamond {background:url("http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/tablesortdiamond.gif") no-repeat;}
+</style>
+<style type="text/css" media="all">
+	
+	
+	
+</style>
+
+
+<style type="text/css" media="all">
+	@import url("http://www.ssn.net/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+
+
+</head>
+<body class="patternViewPage"><a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternWrapper"><div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain"><div id="patternClearHeaderCenter"></div>
+<div id="patternMainContents">
+<div class="patternTop">
+<div class="patternToolBar">
+<div class="patternToolBarButtons"><span class="patternButton"><a href='http://www.ssn.net/twiki/bin/edit/CseIntranet/CseUnitTests?t=1519436936' rel='nofollow' title='Edit this topic text' accesskey='e'><span class='twikiAccessKey'>E</span>dit</a></span><span class="patternButton"><span class='patternButton'><a href='http://www.ssn.net/twiki/bin/attach/CseIntranet/CseUnitTests' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span></span><span class="patternButton"><span class='patternButton'><a href='CseUnitTestsf239.html?cover=print' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rintable</a></span></span>
+</div>
+</div><!-- /patternToolBar-->
+<div class="patternToolBarBottom"></div>
+</div><!-- /patternTop-->
+<div class="patternHomePath"><span class="twikiRight"> <span class="patternRevInfo">r195 - 20 Feb 2018 - 09:33:16 - <a href="http://www.ssn.net/twiki/bin/view/Main/LakshmiPriyaS" class="twikiLink">LakshmiPriyaS</a></span></span><span class="patternHomePathTitle">You are here: </span> <a href="http://www.ssn.net/twiki/bin/view/Main/WebHome" class="twikiLink">SSN Institutions</a><span class='twikiSeparator'>&nbsp;&gt;&nbsp;</span><a href="WebHome.html"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg-small.gif" border="0" alt="" width="13" height="13" style="background-color:#33CCFF" />&nbsp;CseIntranet Web</a><span class='twikiSeparator'>&nbsp;&gt;&nbsp;</span><span title="CseIntranet.CseUnitTests">CseUnitTests</span><br class="twikiClear" /></div><!-- /patternHomePath--><div class="twikiBeforeText"></div><div class="patternContent"><div class="patternTopic"> <img src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/utbar.jpg" alt="utbar.jpg" width='780' height='80' />
+<p />
+<table cellpadding=3 cellspacing=10>
+<tr bgcolor=#E5CFAA align=center>
+<td>
+<h3><a name="Test_Coordinators"></a> <font color="#0000ff">Test Coordinators</font> </h3>
+Dr.R.Kanchana<br>
+Mrs.R.Priyadharshini<br>
+Mrs.S.Lakshmi Priya<br>
+Mrs.S.Manisha<br>
+<p />
+<h3><a name="Responsibilities_of_Test_Coordin"></a> <font color="#0000ff">Responsibilities of Test Coordinators</font> </h3>
+<a href="../../../pub/CseIntranet/CseUnitTests/INDIVIDUAL_WORKLOAD.pdf" target="_top"><img width="16" alt="pdf" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<p />
+<p />
+<p />
+<td>
+<h3><a name="Guidelines"></a> <font color="#0000ff">Guidelines</font> </h3>
+   Faculty Guidelines <a href="../../../pub/CseIntranet/CseUnitTests/Faculty_Instructions.pdf" target="_top"><img width="16" alt="pdf" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a> <br>
+   Students Guidelines <a href="../../../pub/CseIntranet/CseUnitTests/Students_Instructions.pdf" target="_top"><img width="16" alt="pdf" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+</td><td>
+<h3><a name="Question_Paper_Template"></a> <font color="#0000ff">Question Paper Template</font> </h3>
+<p />
+  Question Paper Template in Latex <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/Latex_Templates.zip" target="_top"><img width="16" alt="zip" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/zip.gif" height="16" border="0" /></a> <br>
+  Question Paper Template in Word - PG and UG 2Year <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/Qn_Template_Word_PG_UG2ndYear.docx" target="_top"><img width="16" alt="doc" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/doc.gif" height="16" border="0" /></a> <br>
+  Question Paper Template in Word - UG 3 and 4 Year <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/Qn_Template_Word_UG3rd4thYear.docx" target="_top"><img width="16" alt="doc" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/doc.gif" height="16" border="0" /></a> <br>
+  Latex Editor for Linux  <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/LatexEditorsLinux.zip" target="_top"><img width="16" alt="zip" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/zip.gif" height="16" border="0" /></a> <br>
+  LED_Latex_Editor for Windows  <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/WindowsLatexEditor_LED.zip" target="_top"><img width="16" alt="zip" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/zip.gif" height="16" border="0" /></a> <br>
+  <span class="twikiNewLink">TexMaker<a href="http://www.ssn.net/twiki/bin/edit/CseIntranet/TexMaker?topicparent=CseIntranet.CseUnitTests" rel="nofollow" title="Create this topic">?</a></span>_Latex_Editor for Windows  <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/WindowsLatexEditor_Texmaker.zip" target="_top"><img width="16" alt="zip" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/zip.gif" height="16" border="0" /></a> <br>
+  Installation Instructions  <a href="../../../pub/CseIntranet/CseUnitTests/InstallationInstructions.pdf" target="_top"><img width="16" alt="pdf" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+</tr>
+</table>
+<p />
+<html>
+<head>
+<h2 align="center" color = "red"> Academic Year 2017-18 Even Semester </h1>
+</head>
+
+<!-- Mirrored from www.ssn.net/twiki/bin/view/CseIntranet/CseUnitTests by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Feb 2018 08:19:07 GMT -->
+</html>
+<marquee><h3 color="blue">Please scroll down to see UT3 and Retest3 Schedule</h3></marquee>
+<p />
+<h3><a name="December_2017_April_2018_Unit_te"></a> <font color="#0000ff">December 2017 - April 2018 Unit tests </font> </h3>
+<p />
+<h3><a name="UT12_Schedule"></a><a name="UT12_Schedule_"></a> <font color="#0000ff">UT12 Schedule </font> </h3>
+<p />
+<img src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/UT12SchDec17-Apr18.jpg" alt="UT12Schedule Dec17-Apr18.JPG" width='600' height='800' />
+<p />
+<h3><a name="Invigilation_Schedule"></a><a name="Invigilation_Schedule_"></a> <font color="#0000ff">Invigilation Schedule </font> </h3>
+<p />
+<img src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/InviSchDec17-Apr18.jpg" alt="UTInviSchedule-Dec17-Apr18.JPG" width='600' height='800' />
+<p />
+<h3><a name="Retest12_Schedule"></a><a name="Retest12_Schedule_"></a> <font color="#0000ff">Retest12 Schedule </font> </h3>
+<p />
+<img src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/Retest12_Schedule.jpg" alt="Retest12Schedule Dec17-Apr18.JPG" width='600' height='800' />
+<p />
+<h3><a name="UT3_Schedule"></a><a name="UT3_Schedule_"></a> <font color="#0000ff">UT3 Schedule </font> </h3>
+<p />
+<img src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/UT3Schedule.jpg" alt="UT3Schedule Dec17-Apr18.JPG" width='600' height='800' />
+<p />
+<h3><a name="UT3_Invigilation_Schedule"></a><a name="UT3_Invigilation_Schedule_"></a> <font color="#0000ff">UT3 - Invigilation Schedule </font> </h3>
+<p />
+<img src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/UT3InviSch.jpg" alt="UT3InviSchedule-Dec17-Apr18.JPG" width='600' height='800' />
+<p />
+<h3><a name="Retest3_Schedule"></a><a name="Retest3_Schedule_"></a> <font color="#0000ff">Retest3 Schedule </font> </h3>
+<p />
+<img src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/Retest3Schedule.jpg" alt="Retest3Schedule Dec17-Apr18.JPG" width='600' height='800' />
+<p />
+<p />
+<!--
+<p />
+<hr />June-November 2017 --------------------------------------------------
+<p />
+<h3><a name="UT3_Schedule"></a><a name="UT3_Schedule_"></a> <font color="#0000ff">UT3 Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT3_scheduleRevised.jpg" alt="UT3Schedule Jun-Nov17.JPG" width='600' height='800' />
+<p />
+<h3><a name="Retest3_revised_Schedule"></a><a name="Retest3_revised_Schedule_"></a> <font color="#0000ff">Retest3-revised Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Retest3-revised.png" alt="Retest23Schedule Jun-Nov17.JPG" width='600' height='800' />
+<p />
+<h3><a name="Invigilation_Schedule_UT3"></a> <font color="#0000ff">Invigilation Schedule - UT3</font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/InviSch3.jpg" alt="UT3InviSchedule-Jun-Nov-17.JPG" width='600' height='800' />
+<p />
+<h3><a name="UT12_Schedule"></a><a name="UT12_Schedule_"></a> <font color="#0000ff">UT12 Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UTSch12.jpg" alt="UT12Schedule Jun-Nov17.JPG" width='600' height='800' />
+<p />
+<h3><a name="Invigilation_Schedule"></a><a name="Invigilation_Schedule_"></a> <font color="#0000ff">Invigilation Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/InviSch12.jpg" alt="UTInviSchedule-Jun-Nov-17.JPG" width='600' height='800' />
+<p />
+<h3><a name="Retest1_Schedule"></a><a name="Retest1_Schedule_"></a> <font color="#0000ff">Retest1 Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Retest1.jpg" alt="Retest1Schedule Jun-Nov17.JPG" width='600' height='800' />
+<p />
+<p />
+<p />
+<p />
+<hr />Jan - Apr-2017------------------------------
+<h3><a name="Jan_April_2017_Unit_tests"></a><a name="Jan_April_2017_Unit_tests_"></a> <font color="#0000ff">Jan - April 2017 Unit tests </font> </h3>
+<p />
+<h3><a name="UT123_Schedule"></a><a name="UT123_Schedule_"></a> <font color="#0000ff">UT123 Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT12Schedule.jpg" alt="UT12Schedule Jan-Apr17.JPG" width='600' height='800' />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/ut3-16-17.jpg" alt="ut3-16-17.jpg" width='600' height='800' />
+<p />
+<h3><a name="Retest123_Schedule"></a><a name="Retest123_Schedule_"></a> <font color="#0000ff">Retest123 Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Retest1.jpg" alt="Retest1Schedule Jan-Apr17.JPG" width='600' height='800' />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Retest2.jpg" alt="Retest2Schedule Jan-Apr17.JPG" width='600' height='800' />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/retest3-16-17.jpg" alt="retest3-16-17.jpg" width='600' height='800' />
+<p />
+<h3><a name="Invigilation_Schedule"></a><a name="Invigilation_Schedule_"></a> <font color="#0000ff">Invigilation Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/inviut1.jpg" alt="UTInviSchedule-Jan-Apr-17.JPG" width='600' height='800' />
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/inviut2-16-17.jpg" alt="UTInviSchedule-Jan-Apr-17.JPG" width='600' height='800' />
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Inviut3-16-17.jpg" alt="Inviut3-16-17.jpg" width='600' height='800' />
+<p />
+<p />
+<p />
+<hr />July-Oct 2016-----------------------
+<p />
+<h3><a name="July_2016_October_2016_Unit_test"></a> <font color="#0000ff">July 2016 - October 2016 Unit tests </font> </h3>
+<p />
+<h3><a name="UT123_Schedule"></a><a name="UT123_Schedule_"></a> <font color="#0000ff">UT123 Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT1_schedule.jpg" alt="UT1Schedule July-Oct16.JPG" width='600' height='800' />
+<p />
+<h3><a name="Retest123_Schedule"></a><a name="Retest123_Schedule_"></a> <font color="#0000ff">Retest123 Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/retest123.jpg" alt="RetestSchedule July-Oct16.JPG" width='600' height='800' />
+<p />
+<h3><a name="Invigilation_Schedule"></a><a name="Invigilation_Schedule_"></a> <font color="#0000ff">Invigilation Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Invigilation_Schedule.jpg" alt="UTInviSchedule-July-Oct16.JPG" width='600' height='800' />
+<p />
+                                   -------------------------------Jan 2016 to April 2016------
+<p />
+<h3><a name="January_2016_April_2016_Unit_tes"></a> <font color="#0000ff">January 2016 - April 2016 Unit tests </font> </h3>
+<p />
+<h3><a name="Revised_UT3_Schedule"></a><a name="Revised_UT3_Schedule_"></a> <font color="#0000ff">Revised UT3 Schedule </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT3Schedule.jpg" alt="UT3Schedule Jan-Apr16.JPG" width='800' height='1000' />
+<p />
+<h3><a name="Invigilation_Schedule_UT3"></a><a name="Invigilation_Schedule_UT3_"></a> <font color="#0000ff">Invigilation Schedule - UT3 </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Invigilation_Schedule_-_UT3.jpg" alt="Invischedule Jan-Apr16.JPG" width='600' height='600' />
+<p />
+<p />
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT23Schedule.jpg" alt="UT23Schedule Jan-Apr16.JPG" width='800' height='1000' />
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/InviSch23.jpg" alt="Invischedule Jan-Apr16.JPG" width='600' height='600' />
+<p />
+<p />
+                                       --------------------July-Dec 15-------------------------------------------------
+<p />
+<html>
+<head>
+<h2 align="center" color = "red"> Academic Year 2015-16 </h1>
+</head>
+</html>
+<h3><a name="July_15_Nov_15_Unit_tests"></a><a name="July_15_Nov_15_Unit_tests_"></a> <font color="#0000ff">July 15-Nov 15 Unit tests </font> </h3>
+<p />
+<h3><a name="UT123_Schedule"></a><a name="UT123_Schedule_"></a> <font color="#0000ff">UT123 Schedule  </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT123ScheduleJul-Nov15.jpg" alt="UTschedule July-Nov15.JPG" width='800' height='1200' />
+<p />
+<h3><a name="Revised_Retest_Schedule"></a><a name="Revised_Retest_Schedule_"></a> <font color="#0000ff">Revised Retest Schedule </font>  <img alt="New.gif" src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/New.gif" /> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Retest123Schedule.jpg" alt="Retestschedule Jul-Nov 15.JPG" width='800' height='900' />
+<p />
+<h3><a name="Invigilation_Schedule_UT3"></a><a name="Invigilation_Schedule_UT3_"></a> <font color="#0000ff">Invigilation Schedule - UT3 </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Invigilation_ScheduleJul-Nov15.jpg" alt="Invigilationschedule Jul-Nov 15.JPG" width='800' height='900' />
+<p />
+<p />
+                                       --------------------Jan-Apr 15-------------------------------------------------
+<p />
+<p />
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/arrow.png" width="25" height="25"> <a href="#UT"><font size=3 color="maroon">UT123 Schedule</font></a><br> <img alt="New.gif" src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/New.gif" /><br>
+<img src="/twiki/pub/CseIntranet/CseUnitTests/arrow.png" width="25" height="25"><a href="#INVI"><font size=3 color="maroon">Invigilation Schedule </a></font> 
+<p />
+<a name="UT">
+<h3><a name="UT123_Schedule"></a><a name="UT123_Schedule_"></a> <font color="#0000ff">UT123 Schedule  </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT123Schedule.jpg" alt="UTschedule Jan-Apr14.JPG" width='800' height='1200' />
+<p />
+</a>
+<p />
+<a name="INVI">
+<h3><a name="Invigilation_Schedule_UT3"></a><a name="Invigilation_Schedule_UT3_"></a> <font color="#0000ff">Invigilation Schedule - UT3 </font> </h3>
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Invigilation_Schedule-UT3.jpg" alt="Invigilationschedule Jan-Apr14.JPG" width='800' height='900' />
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Invigilation_Schedule.jpg" alt="Invigilationschedule Jan-Apr 15.JPG" width='800' height='900' />
+</a>
+<p />
+<p />
+<hr />July-Nov 14-----------------------------------
+<p />
+<h3><a name="Revised_Retest3_Schedule"></a><a name="Revised_Retest3_Schedule_"></a> <font color="#0000ff">Revised Retest3 Schedule  </font> </h3>
+<html><marquee><h4 color="red"> Refer your mail for revised schedule </h4></marquee></html>
+<p />
+<p />
+<p />
+<h3><a name="UT_123Schedule"></a><a name="UT_123Schedule_"></a> <font color="#0000ff">UT 123Schedule  </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT_123_Schedule.jpg" alt="UTschedule July -Nov 14.JPG" width='880' height='1200' />
+<p />
+<h3><a name="Unit_Test_1_Seating_Arrangement"></a><a name="Unit_Test_1_Seating_Arrangement_"></a> <font color="#0000ff">Unit Test 1 Seating Arrangement  </font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/OverAll_Seating.jpg" alt=" Overall Seating July -Nov 14.JPG" width='700' height='1000' />
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/OverAll_Seating_With_Electives.jpg" alt=" Overall Seating July -Nov 14.JPG" width='700' height='1000' />
+<p />
+<h3><a name="Invigilation_Schedule"></a> <font color="#0000ff">Invigilation Schedule</font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Invigilation_Schedule_-UT_1.jpg" alt="UTinvischeduleJuly-Nov 14.JPG" width='1000' height='1000' />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<h3><a name="Retest_Schedule"></a><a name="Retest_Schedule_"></a> <font color="#0000ff">Retest Schedule  </font> </h3>
+<html><marquee><h4 color="red"> Refer the revised schedule for retest3</h4></marquee></html>
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Retest_Schedule.jpg" alt="Retestschedule July -Nov 14.JPG" width='880' height='1200' />
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Retest3_Schedule.jpg" alt="Retestschedule July -Nov 14.JPG" width='880' height='1200' />
+<p />
+<p />
+<p />
+<p />
+                                      ----------Jan-Apr 14--------------
+<p />
+<h3><a name="Retest123_Schedule_Invigilation"></a><a name="Retest123_Schedule_Invigilation_"></a> <font color="#0000ff">Retest123 Schedule &amp; Invigilation duty</font> <img alt="New.gif" src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/New.gif" /> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/retestinvisch.jpg" alt="Retest schedule Jan -Apr 14.JPG" width='980' height='980' />
+<p />
+<h3><a name="UT_123_Schedule"></a> <font color="#0000ff">UT 123 Schedule</font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/UT123Schedule.jpg" alt="UTschedule Jan -Apr 14.JPG" width='980' height='980' />
+<p />
+<h3><a name="Invigilation_Schedule"></a> <font color="#0000ff">Invigilation Schedule</font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Invigilation_Schedule.jpg" alt="UTinvischeduleJuly-Nov 13.JPG" width='980' height='980' />
+<p />
+<p />
+<p />
+<p />
+    ---------------------------   July- Nov 2013 ----------------------------
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/UT123_SCH-REVISED.JPG" alt="UTscheduleJuly-Nov 13.JPG" width='840' height='840' />
+<p />
+<h3><a name="Retest_Schedule"></a> <font color="#0000ff">Retest Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/Retest_schedule.jpg" alt="RetestscheduleJuly-Nov 13.JPG" width='840' height='840' />
+<p />
+<h3><a name="UT_123_Invigilation_Schedule"></a> <font color="#0000ff">UT 123 Invigilation Schedule</font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/Revised_Invigilation_schedule.jpg" alt="UTinvischeduleJuly-Nov 13.JPG" width='840' height='840' />
+<p />
+<h3><a name="Staffwise_Invigilation_Schedule"></a> <font color="#0000ff">Staffwise Invigilation Schedule</font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/staffwise_invi_sch.jpg" alt="UTinvischeduleJuly-Nov 13.JPG" width='1240' height='1040' />
+<p />
+<p />
+<p />
+<p />
+<hr />Jan 13 ----------- Apr 13---
+<p />
+<h3><a name="Retest_Schedule"></a> <font color="#0000ff">Retest Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/retestschjan-apr13.JPG" alt="Retest_Schedule.JPG" width='950' height='640' />
+<p />
+<h3><a name="Retest_Circular"></a> <font color="#0000ff">Retest Circular</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/Retest_Circular_studentsJan-Apr13.JPG" alt="Retest_Circular.JPG" width='800' height='640' />
+<p />
+<h3><a name="Revised_UT3_Schedule"></a> <font color="#0000ff">Revised UT3 Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/UT123schrevisedJan13_Apr13.JPG" alt="UT123schrevised.JPG" width='800' height='800' />
+<p />
+<h3><a name="Revised_Invigilation_Schedule"></a> <font color="#0000ff">Revised Invigilation Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/RevisedInvigilationScheduleJan-Apr13.JPG" alt="inviglationschedule.JPG" width='700' height='750' />
+<p />
+<p />
+<h3><a name="UT_123_Schedule"></a> <font color="#0000ff">UT 123 Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/UTSCHJan13_Apr13.JPG" alt="UTschedule.JPG" width='679' height='640' />
+<p />
+<h3><a name="Invigilation_Schedule"></a> <font color="#0000ff">Invigilation Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/InvigilationScheduleJan-Apr13.JPG" alt="inviglationschedule.JPG" width='700' height='750' />
+<p />
+<h4><a name="List_of_Invigilators"></a> <font color="#008000">List of Invigilators</font>  <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/List_of_Invigilators.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a> </h4>
+<p />
+<h3><a name="Staffwise_Invigilation_Schedule"></a> <font color="#0000ff">Staffwise Invigilation Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/Staffwise_Invi_Sch.JPG" alt="Staffwiseinviglationschedule.JPG" width='700' height='750' />
+<p />
+<p />
+<p />
+<hr />Start of July, 12 - Dec 12---------------------
+<p />
+<h3><a name="Retest_Schedule"></a> <font color="#0000ff">Retest Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/retest.JPG" alt="Retestschedule.JPG" width='600' height='800' />
+<p />
+<h3><a name="UT_I_II_for_III_Sem_Lateral_Entr"></a> <font color="#0000ff">UT I &amp; II for III Sem Lateral Entry Students</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/Lateral_test.JPG" alt="UT for III sem Lateral Entry Students.JPG" width='600' height='450' />
+<p />
+<h3><a name="UT_123_Schedule"></a> <font color="#0000ff">UT 123 Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/UT_Sch_july-nov12.JPG" alt="UTschedule.JPG" width='679' height='640' />
+<p />
+<h3><a name="Invigilation_Schedule"></a> <font color="#0000ff">Invigilation Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/invisch.JPG" alt="ut123inviglationschedule.JPG" width='679' height='640' />
+<p />
+<h3><a name="Staffwise_Invigilation_Schedule"></a> <font color="#0000ff">Staffwise Invigilation Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/staffwise_invi_sch.JPG" alt="ut123inviglationschedule.JPG" width='679' height='640' />
+<p />
+<p />
+<hr />End of Semester ----------
+<p />
+<table align=right width="133" border="0" cellspacing="0" cellpadding="3"><tr><td align="center"><a href="http://www.inteliture.com" target="_blank"><img src="http://www.inteliture.com/cgi-bin/image.pl?URL=186685-6404" alt="provided by Inteliture.com" border="0" ></a></td></tr><tr><td align="center"><font style="font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 9px; color: #330002; text-decoration: none;"> <a href="http://www.inteliture.com" target="_blank" style="font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 9px; color: #555552; text-decoration: none;" title="Inteliture.com"></a> </font></td></tr></table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<p />
+<p /> <ul>
+<li> <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/LatexEditorsLinux.zip" target="_top">LatexEditorsLinux.zip</a>: <span class="twikiNewLink">LatexEditorsLinux<a href="/twiki/bin/edit/CseIntranet/LatexEditorsLinux?topicparent=CseIntranet.CseUnitTests" rel="nofollow" title="Create this topic">?</a></span>.zip
+</li></ul> 
+<p /> <ul>
+<li> <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/WindowsLatexEditor_LED.zip" target="_top">WindowsLatexEditor_LED.zip</a>: <span class="twikiNewLink">WindowsLatexEditor<a href="/twiki/bin/edit/CseIntranet/WindowsLatexEditor?topicparent=CseIntranet.CseUnitTests" rel="nofollow" title="Create this topic">?</a></span>_LED.zip
+</li></ul> 
+<p /> <ul>
+<li> <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/WindowsLatexEditor_Texmaker.zip" target="_top">WindowsLatexEditor_Texmaker.zip</a>: <span class="twikiNewLink">WindowsLatexEditor<a href="/twiki/bin/edit/CseIntranet/WindowsLatexEditor?topicparent=CseIntranet.CseUnitTests" rel="nofollow" title="Create this topic">?</a></span>_Texmaker.zip
+</li></ul> 
+<p /> <ul>
+<li> <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/InstallationInstructions.pdf" target="_top">InstallationInstructions.pdf</a>: <span class="twikiNewLink">InstallationInstructions<a href="/twiki/bin/edit/CseIntranet/InstallationInstructions?topicparent=CseIntranet.CseUnitTests" rel="nofollow" title="Create this topic">?</a></span>.pdf
+</li></ul> 
+<p /> <ul>
+<li> <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/Latex_Templates.zip" target="_top">Latex_Templates.zip</a>: Latex_Templates.zip
+</li></ul> 
+<p />
+<p />
+<p />
+<table>
+<tr>
+            <td width="100%" colspan="2" height="100">
+            <p align="center"><font color="#008000" size="6">
+            <img border="0" src="http://www.ssn.net/twiki/bin/viewfile/CseIntranet/CseUnitTests?rev=1;filename=unit_test.jpg" width="145" height="106"> Unit Test</font></td>
+<p />
+          </tr>
+</table>
+<p />
+<p />
+<p />
+<div class="twikiToc"> <ul>
+<li> <a href="#Test_Coordinators"><font color="#0000ff">Test Coordinators</font></a>
+</li> <li> <a href="#Responsibilities_of_Test_Coordin"><font color="#0000ff">Responsibilities of Test Coordinators</font></a>
+</li> <li> <a href="#Guidelines"><font color="#0000ff">Guidelines</font></a>
+</li> <li> <a href="#Question_Paper_Template"><font color="#0000ff">Question Paper Template</font></a>
+</li> <li> <a href="#December_2017_April_2018_Unit_te"><font color="#0000ff">December 2017 - April 2018 Unit tests </font></a>
+</li> <li> <a href="#UT12_Schedule"><font color="#0000ff">UT12 Schedule </font> </a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule </font> </a>
+</li> <li> <a href="#Retest12_Schedule"><font color="#0000ff">Retest12 Schedule </font> </a>
+</li> <li> <a href="#UT3_Schedule"><font color="#0000ff">UT3 Schedule </font> </a>
+</li> <li> <a href="#UT3_Invigilation_Schedule"><font color="#0000ff">UT3 - Invigilation Schedule </font> </a>
+</li> <li> <a href="#Retest3_Schedule"><font color="#0000ff">Retest3 Schedule </font> </a>
+</li> <li> <a href="#UT3_Schedule"><font color="#0000ff">UT3 Schedule </font> </a>
+</li> <li> <a href="#Retest3_revised_Schedule"><font color="#0000ff">Retest3-revised Schedule </font> </a>
+</li> <li> <a href="#Invigilation_Schedule_UT3"><font color="#0000ff">Invigilation Schedule - UT3</font> </a>
+</li> <li> <a href="#UT12_Schedule"><font color="#0000ff">UT12 Schedule </font> </a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule </font> </a>
+</li> <li> <a href="#Retest1_Schedule"><font color="#0000ff">Retest1 Schedule </font> </a>
+</li> <li> <a href="#Jan_April_2017_Unit_tests"><font color="#0000ff">Jan - April 2017 Unit tests </font></a>
+</li> <li> <a href="#UT123_Schedule"><font color="#0000ff">UT123 Schedule </font> </a>
+</li> <li> <a href="#Retest123_Schedule"><font color="#0000ff">Retest123 Schedule </font> </a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule </font> </a>
+</li> <li> <a href="#July_2016_October_2016_Unit_test"><font color="#0000ff">July 2016 - October 2016 Unit tests </font></a>
+</li> <li> <a href="#UT123_Schedule"><font color="#0000ff">UT123 Schedule </font> </a>
+</li> <li> <a href="#Retest123_Schedule"><font color="#0000ff">Retest123 Schedule </font> </a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule </font> </a>
+</li> <li> <a href="#January_2016_April_2016_Unit_tes"><font color="#0000ff">January 2016 - April 2016 Unit tests </font></a>
+</li> <li> <a href="#Revised_UT3_Schedule"><font color="#0000ff">Revised UT3 Schedule </font> </a>
+</li> <li> <a href="#Invigilation_Schedule_UT3"><font color="#0000ff">Invigilation Schedule - UT3 </font> </a>
+</li> <li> <a href="#July_15_Nov_15_Unit_tests"><font color="#0000ff">July 15-Nov 15 Unit tests </font></a>
+</li> <li> <a href="#UT123_Schedule"><font color="#0000ff">UT123 Schedule  </font> </a>
+</li> <li> <a href="#Revised_Retest_Schedule_http_www"><font color="#0000ff">Revised Retest Schedule </font> http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/New.gif</a>
+</li> <li> <a href="#Invigilation_Schedule_UT3"><font color="#0000ff">Invigilation Schedule - UT3 </font></a>
+</li> <li> <a href="#UT123_Schedule"><font color="#0000ff">UT123 Schedule  </font> </a>
+</li> <li> <a href="#Invigilation_Schedule_UT3"><font color="#0000ff">Invigilation Schedule - UT3 </font> </a>
+</li> <li> <a href="#Revised_Retest3_Schedule"><font color="#0000ff">Revised Retest3 Schedule  </font> </a>
+</li> <li> <a href="#UT_123Schedule"><font color="#0000ff">UT 123Schedule  </font> </a>
+</li> <li> <a href="#Unit_Test_1_Seating_Arrangement"><font color="#0000ff">Unit Test 1 Seating Arrangement  </font> </a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule</font></a>
+</li> <li> <a href="#Retest_Schedule"><font color="#0000ff">Retest Schedule  </font> </a>
+</li> <li> <a href="#Retest123_Schedule_Invigilation"><font color="#0000ff">Retest123 Schedule &amp; Invigilation duty</font> http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/New.gif</a>
+</li> <li> <a href="#UT_123_Schedule"><font color="#0000ff">UT 123 Schedule</font></a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule</font></a>
+</li> <li> <a href="#Retest_Schedule"><font color="#0000ff">Retest Schedule</font></a>
+</li> <li> <a href="#UT_123_Invigilation_Schedule"><font color="#0000ff">UT 123 Invigilation Schedule</font></a>
+</li> <li> <a href="#Staffwise_Invigilation_Schedule"><font color="#0000ff">Staffwise Invigilation Schedule</font></a>
+</li> <li> <a href="#Retest_Schedule"><font color="#0000ff">Retest Schedule</font></a>
+</li> <li> <a href="#Retest_Circular"><font color="#0000ff">Retest Circular</font></a>
+</li> <li> <a href="#Revised_UT3_Schedule"><font color="#0000ff">Revised UT3 Schedule</font></a>
+</li> <li> <a href="#Revised_Invigilation_Schedule"><font color="#0000ff">Revised Invigilation Schedule</font></a>
+</li> <li> <a href="#UT_123_Schedule"><font color="#0000ff">UT 123 Schedule</font></a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule</font></a> <ul>
+<li> <a href="#List_of_Invigilators"><font color="#008000">List of Invigilators</font>  <img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</li></ul> 
+</li> <li> <a href="#Staffwise_Invigilation_Schedule"><font color="#0000ff">Staffwise Invigilation Schedule</font></a>
+</li> <li> <a href="#Retest_Schedule"><font color="#0000ff">Retest Schedule</font></a>
+</li> <li> <a href="#UT_I_II_for_III_Sem_Lateral_Entr"><font color="#0000ff">UT I &amp; II for III Sem Lateral Entry Students</font></a>
+</li> <li> <a href="#UT_123_Schedule"><font color="#0000ff">UT 123 Schedule</font></a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule</font></a>
+</li> <li> <a href="#Staffwise_Invigilation_Schedule"><font color="#0000ff">Staffwise Invigilation Schedule</font></a>
+</li> <li> <a href="#II_Year_Retest"><font color="#0000ff"> II Year Retest</font></a>
+</li> <li> <a href="#Retest"><font color="#0000ff">Retest</font></a>
+</li> <li> <a href="#Retest_Schedule"><font color="#0000ff">Retest Schedule</font></a>
+</li> <li> <a href="#Retest_http_www_ssn_net_twiki_pu"><font color="#0000ff">Retest </font> http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/new.jpg</a>
+</li> <li> <a href="#Retest_Invigilation_Schedule_htt"><font color="#0000ff">Retest Invigilation Schedule </font> http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/new.jpg</a>
+</li> <li> <a href="#Unit_Test_1_2_and_3_Schedule"><font color="#0000ff">Unit Test 1,2 and 3 Schedule</font> </a>
+</li> <li> <a href="#Invigilation_Schedule"><font color="#0000ff">Invigilation Schedule</font></a>
+</li> <li> <a href="#Staff_wise_Invigilation_Schedule"><font color="#0000ff">Staff wise Invigilation Schedule</font></a>
+</li> <li> <a href="#Overall_Seating_Arrangement"><font color="#0000ff">Overall Seating Arrangement</font></a>
+</li> <li> <a href="#Seating_Arrangement_Without_Fina"><font color="#0000ff">Seating Arrangement (Without Final Years)</font></a>
+</li> <li> <a href="#Overall"><font color="#0000ff">Overall</font></a>
+</li> <li> <a href="#LH46"><font color="#0000ff">LH46</font></a>
+</li> <li> <a href="#LH51"><font color="#0000ff">LH51</font></a>
+</li> <li> <a href="#LH50"><font color="#0000ff">LH50</font></a>
+</li> <li> <a href="#LH45"><font color="#0000ff">LH45</font></a>
+</li> <li> <a href="#Seating_Arrangement_With_Final_Y"><font color="#0000ff">Seating Arrangement (With Final Years)</font></a>
+</li> <li> <a href="#Overall"><font color="#0000ff">Overall</font></a>
+</li> <li> <a href="#LH46"><font color="#0000ff">LH46</font></a>
+</li> <li> <a href="#LH51"><font color="#0000ff">LH51</font></a>
+</li> <li> <a href="#LH50"><font color="#0000ff">LH50</font></a>
+</li> <li> <a href="#LH45"><font color="#0000ff">LH45</font></a>
+</li> <li> <a href="#LH44"><font color="#0000ff">LH44</font></a>
+</li> <li> <a href="#LH49"><font color="#0000ff">LH49</font></a>
+</li> <li> <a href="#Overall_Seating_Arrangement"><font color="#0000ff">Overall Seating Arrangement</font></a>
+</li> <li> <a href="#Overall"><font color="#0000ff">Overall</font></a>
+</li> <li> <a href="#LH46"><font color="#0000ff">LH46</font></a>
+</li> <li> <a href="#LH51"><font color="#0000ff">LH51</font></a>
+</li> <li> <a href="#LH45"><font color="#0000ff">LH45</font></a>
+</li> <li> <a href="#LH50"><font color="#0000ff">LH50</font></a>
+</li> <li> <a href="#LH44"><font color="#0000ff">LH44</font></a>
+</li> <li> <a href="#LH49"><font color="#0000ff">LH49</font></a>
+</li></ul> 
+</div>
+<p />
+<p />
+<hr>
+<hr>
+<p />
+<br />
+<p />
+<hr>
+<hr>
+    <br /> 
+<p />
+<p />
+<p />
+<h3><a name="II_Year_Retest"></a><a name="_II_Year_Retest"></a> <font color="#0000ff"> II Year Retest</font> </h3>
+<b>Attention: BE (CSE) III semester Students</b><br><br>
+Absentees of any of the three unit tests can appear for the retest by submitting an
+application along with a requisition letter endorsed by their parents. The application
+form for the retest is available in the department office and will be issued from
+10.10.2011.<br>
+<b>The last Date for submission of Application form to Ms. R. Kanchana : 25.10.2011 </b>
+<br>The hall and seating arrangement can be found out from the Test Coordinator on
+the day of the test. Students are advised not to be absent for the retest.
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/schedule.JPG" alt="schedule.JPG" width='853' height='474' />
+<p />
+<h3><a name="Retest"></a> <font color="#0000ff">Retest</font> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/retestcircularstudent.JPG" alt="retestcircularstudent.JPG" width='595' height='158' />
+<br>The hall and seating arrangement can be found out from the Test Coordinator on the day of the test. Students are advised not to be absent for the retest. 
+<p />
+The concerned faculty members are requested to handover the question paper for the retest on or before 03.10.2011. The portion for the retests is the combined portions of all the three unit tests.  
+<h3><a name="Retest_Schedule"></a> <font color="#0000ff">Retest Schedule</font> </h3>
+<img src="/twiki/pub/CseIntranet/CseUnitTests/retestschedule.JPG" alt="retestschedule.JPG" width='600' height='425' />
+<p />
+<p />
+ <img src="/twiki/pub/CseIntranet/CseUnitTests/retestcircular.JPG" alt="retestcircular.JPG" width='623' height='562' />
+<p />
+<Blink> <b>The test scheduled on 2.9.2011 (141302 DPSD for lateral entries) has been postponed to 14th Sep Wednesday. </b></blink><br><br><br>
+     <img src="/twiki/pub/CseIntranet/CseUnitTests/lateralschedulenew.JPG" alt="lateralschedule.JPG" width='550' height='305' />
+<hr>
+<hr>
+   <br />
+     <img src="/twiki/pub/CseIntranet/CseUnitTests/lateralinviglnnew.JPG" alt="lateralinvigln.JPG" width='633' height='396' />
+<hr>
+<hr>
+<p />
+<hr />Dec 2011 - Apr 2012--------
+<p />
+<html>
+<head>
+<h2 align="center" color = "red"> December 2011 - April 2012 </h1>
+</head>
+</html>
+<p />
+<h3><a name="Retest"></a><a name="Retest_"></a> <font color="#0000ff">Retest </font> <img alt="new.jpg" src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/new.jpg" /> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/retestsch.JPG" alt=" Retest Schedule.JPG" width='850' height='753' />
+<p />
+<h3><a name="Retest_Invigilation_Schedule"></a><a name="Retest_Invigilation_Schedule_"></a> <font color="#0000ff">Retest Invigilation Schedule </font> <img alt="new.jpg" src="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/new.jpg" /> </h3>
+<p />
+<img src="/twiki/pub/CseIntranet/CseUnitTests/retest-invisch.JPG" alt=" Retest Schedule.JPG" width='679' height='650' />
+<p />
+<h3><a name="Unit_Test_1_2_and_3_Schedule"></a> <font color="#0000ff">Unit Test 1,2 and 3 Schedule</font> </h3>
+<p />
+<p />
+ <img src="/twiki/pub/CseIntranet/CseUnitTests/sch-revised.JPG" alt="ut1schedule.JPG" width='850' height='753' />
+<p />
+<p />
+<p />
+<h3><a name="Invigilation_Schedule"></a> <font color="#0000ff">Invigilation Schedule</font> </h3>
+<p />
+  <img src="/twiki/pub/CseIntranet/CseUnitTests/invisch-revised.JPG" alt="ut123inviglationschedule.JPG" width='679' height='640' />
+<p />
+<p />
+<h3><a name="Staff_wise_Invigilation_Schedule"></a> <font color="#0000ff">Staff wise Invigilation Schedule</font> </h3>
+<p />
+ <img src="/twiki/pub/CseIntranet/CseUnitTests/staffwiseinvisch-revised.JPG" alt="ut123inviglationschedulestaffwise.JPG" width='843' height='649' />
+<p />
+<p />
+<p />
+<p />
+<hr />
+<p />
+<p />
+<hr />End of Dec 2011 - Apr 2012---------------
+<p />
+<p />
+<hr>
+<p />
+<h3><a name="Overall_Seating_Arrangement"></a> <font color="#0000ff">Overall Seating Arrangement</font> </h3>
+<p />
+For Mondays  <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/OVERALL_SEATING-_Jan2011-_MONDAYS.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a><br>
+For Fridays <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/OVERALL_SEATING-_Jan_2011_-FRIDAYS.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+<p />
+<p />
+<h3><a name="Seating_Arrangement_Without_Fina"></a> <font color="#0000ff">Seating Arrangement (Without Final Years)</font> </h3>
+<p />
+  <table cellpadding=3 cellspacing=10>
+<tr bgcolor=#E5CFAA align=center>
+<td>
+<p />
+</td>
+<p />
+<p />
+<p />
+<td>
+<h3><a name="Overall"></a> <font color="#0000ff">Overall</font> </h3>
+   <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td><td>
+<h3><a name="LH46"></a> <font color="#0000ff">LH46</font> </h3>
+   <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+</td><td>
+<h3><a name="LH51"></a> <font color="#0000ff">LH51</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a><br>
+ </td>
+<p />
+<td>
+<h3><a name="LH50"></a> <font color="#0000ff">LH50</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<td>
+<h3><a name="LH45"></a> <font color="#0000ff">LH45</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<p />
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<p />
+</tr>
+</table>
+<p />
+<p />
+<p />
+<p />
+<p />
+<h3><a name="Seating_Arrangement_With_Final_Y"></a> <font color="#0000ff">Seating Arrangement (With Final Years)</font> </h3>
+<p />
+  <table cellpadding=3 cellspacing=10>
+<tr bgcolor=#E5CFAA align=center>
+<td>
+<p />
+</td>
+<p />
+<p />
+<p />
+<td>
+<h3><a name="Overall"></a> <font color="#0000ff">Overall</font> </h3>
+   <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td><td>
+<h3><a name="LH46"></a> <font color="#0000ff">LH46</font> </h3>
+   <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+</td><td>
+<h3><a name="LH51"></a> <font color="#0000ff">LH51</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a><br>
+ </td>
+<p />
+<td>
+<h3><a name="LH50"></a> <font color="#0000ff">LH50</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<td>
+<h3><a name="LH45"></a> <font color="#0000ff">LH45</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<p />
+<td>
+<h3><a name="LH44"></a> <font color="#0000ff">LH44</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<td>
+<h3><a name="LH49"></a> <font color="#0000ff">LH49</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<p />
+</tr>
+</table>
+<p />
+<p />
+<p />
+<h3><a name="Overall_Seating_Arrangement"></a> <font color="#0000ff">Overall Seating Arrangement</font> </h3>
+     <img src="/twiki/pub/CseIntranet/CseUnitTests/overallattendance.JPG" alt="overallattendance.JPG" width='623' height='504' />
+<p />
+<p />
+ <table cellpadding=3 cellspacing=10>
+<tr bgcolor=#E5CFAA align=center>
+<td>
+<p />
+</td>
+<p />
+<p />
+<p />
+<td>
+<h3><a name="Overall"></a> <font color="#0000ff">Overall</font> </h3>
+   <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/1OVERALL.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td><td>
+<h3><a name="LH46"></a> <font color="#0000ff">LH46</font> </h3>
+   <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/1LH46.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+</td><td>
+<h3><a name="LH51"></a> <font color="#0000ff">LH51</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/1LH51.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a><br>
+ </td>
+<p />
+<td>
+<h3><a name="LH45"></a> <font color="#0000ff">LH45</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/1LH45.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<td>
+<h3><a name="LH50"></a> <font color="#0000ff">LH50</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/1LH50.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<p />
+<td>
+<h3><a name="LH44"></a> <font color="#0000ff">LH44</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/1LH44.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<td>
+<h3><a name="LH49"></a> <font color="#0000ff">LH49</font> </h3>
+    <a href="http://www.ssn.net/twiki/pub/CseIntranet/CseUnitTests/1LH49.pdf" target="_top"><img width="16" alt="pdf" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/pdf.gif" height="16" border="0" /></a>
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<td>
+<p />
+</td>
+<p />
+</tr>
+</table>
+<p />
+<p />
+<p />
+&lt;img src="/twiki/pub/CseIntranet/CseUnitTests/invigilation18-2-10.JPG" alt="invigilation18-2-10.JPG" width='468' height='473' 
+--> 
+<p />
+<p />
+<p />
+<p />
+<p /></div><!-- /patternTopic-->
+<div class="twikiAfterText"></div></div><!-- /patternContent-->
+<a name="topic-actions"> </a><div class="patternTopicActions"><div class="patternTopicAction"><span class="patternActionButtons"> <span class="patternButton"><a href='http://www.ssn.net/twiki/bin/edit/CseIntranet/CseUnitTests?t=1519436937' rel='nofollow' title='Edit this topic text' accesskey='e'><span class='twikiAccessKey'>E</span>dit</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span class='patternButton'><a href='http://www.ssn.net/twiki/bin/attach/CseIntranet/CseUnitTests' rel='nofollow' title='Attach an image or document to this topic' accesskey='a'><span class='twikiAccessKey'>A</span>ttach</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span class='patternButton'><a href='CseUnitTestsf239.html?cover=print' rel='nofollow' title='Printable version of this topic' accesskey='p'><span class='twikiAccessKey'>P</span>rintable</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span class='patternButton'><a href='CseUnitTestsa62c.html?raw=on' rel='nofollow' title='View raw text without formatting' accesskey='r'><span class='twikiAccessKey'>R</span>aw View</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span>Backlinks: <span class='patternButton'><a href='http://www.ssn.net/twiki/bin/oops/CseIntranet/CseUnitTests?template=backlinksweb' rel='nofollow' title='Search the CseIntranet Web for topics that link to here' accesskey='b'>We<span class='twikiAccessKey'>b</span></a></span>, <span class='patternButton'><a href='http://www.ssn.net/twiki/bin/oops/CseIntranet/CseUnitTests?template=backlinksallwebs' rel='nofollow' title='Search all webs for topics that link to here' accesskey='l'>A<span class='twikiAccessKey'>l</span>l Webs</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span class="patternRevision"><span class='patternButton'><a href='http://www.ssn.net/twiki/bin/rdiff/CseIntranet/CseUnitTests?type=history' rel='nofollow' title='View total topic history' accesskey='h'><span class='twikiAccessKey'>H</span>istory</a></span>: r195&nbsp;<a rel="nofollow" href="http://www.ssn.net/twiki/bin/rdiff/CseIntranet/CseUnitTests?rev1=195;rev2=194">&lt;</a>&nbsp;<a rel="nofollow" href="CseUnitTests4683.html?rev=194">r194</a>&nbsp;<a rel="nofollow" href="http://www.ssn.net/twiki/bin/rdiff/CseIntranet/CseUnitTests?rev1=194;rev2=193">&lt;</a>&nbsp;<a rel="nofollow" href="CseUnitTestscfc5.html?rev=193">r193</a>&nbsp;<a rel="nofollow" href="http://www.ssn.net/twiki/bin/rdiff/CseIntranet/CseUnitTests?rev1=193;rev2=192">&lt;</a>&nbsp;<a rel="nofollow" href="CseUnitTests0e9a.html?rev=192">r192</a>&nbsp;<a rel="nofollow" href="http://www.ssn.net/twiki/bin/rdiff/CseIntranet/CseUnitTests?rev1=192;rev2=191">&lt;</a>&nbsp;<a rel="nofollow" href="CseUnitTests89f9.html?rev=191">r191</a></span><span class='twikiSeparator'>&nbsp;|&nbsp;</span><span class='patternButton'><a href='http://www.ssn.net/twiki/bin/oops/CseIntranet/CseUnitTests?template=oopsmore&amp;param1=195&amp;param2=195' rel='nofollow' title='Delete or rename this topic; set parent topic; view and compare revisions' accesskey='m'><span class='twikiAccessKey'>M</span>ore topic actions</a></span></span></div></div><!--/patternTopicActions--><div class="patternMoved"></div><!-- /patternMoved-->
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain--><div id="patternLeftBar"><div id="patternClearHeaderLeft"></div>
+<div id="patternLeftBarContents">
+<div class="patternWebIndicator"><b><a href="WebHome.html">CseIntranet</a></b></div>
+<div class="patternLeftBarPersonal">
+<ul><li class="patternLogIn"><a href="http://www.ssn.net/twiki/bin/login/CseIntranet/CseUnitTests?origurl=/twiki/bin/view/CseIntranet/CseUnitTests">Log In</a> or <a href="http://www.ssn.net/twiki/bin/view/TWiki/TWikiRegistration" class="twikiLink">Register</a></li></ul>
+<div class="patternLeftBarPersonalContent">
+</div></div>
+<p />
+<!--
+<script src="http://www.gmodules.com/ig/ifr?url=http://www.matt.org/modules/GoogleClock.xml&amp;up_vsize=100px&amp;synd=open&amp;w=100&amp;h=100&amp;title=&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
+--> <ul>
+<li> <b><a href="WebHome.html" class="twikiCurrentWebHomeLink twikiLink"> <img width="16" alt="home" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/home.gif" height="16" border="0" />CSE Home</a></b>
+</li> <li> <a href="CseHod.html" class="twikiLink">HOD's Desk</a>
+</li> <li> <a href="CseFaculty.html" class="twikiLink">Faculty</a>
+</li> <li> <a href="CseStudents.html" class="twikiLink">Students</a>
+</li></ul> 
+<hr /> <ul>
+<li> <a href="CseCalendar.html" class="twikiLink">Calendar</a>
+</li> <li> <a href="CSENewsLetter.html" class="twikiLink">CSE NewsLetter</a>
+</li> <li> <a href="CseAnnouncements.html" class="twikiLink">Announcements</a>
+</li></ul> 
+<hr />
+<strong>Academic</strong> <ul>
+<li> <a href="CseTimeTable.html" class="twikiLink">Time Table</a>
+</li> <li> <a href="CseUGPeoPo.html" class="twikiLink">UG-PEOs &amp; POs</a>
+</li> <li> <a href="CsePGPeoPo.html" class="twikiLink">PG-PEOs &amp; POs</a>
+</li> <li> <a href="CseElearning.html" class="twikiLink">E-Learning</a> 
+</li> <li> <a href="CseUnitTests.html" class="twikiCurrentTopicLink twikiLink">Unit Tests</a> 
+</li> <li> <a href="CseUnivExams.html" class="twikiLink">University Exam</a> 
+</li> <li> <a href="CseGuestSeminar.html" class="twikiLink">Guest Lecture</a> 
+</li> <li> <a href="CseFdpWorkshop.html" class="twikiLink">FDP/Workshop</a>
+</li> <li> <a href="CseResearch.html" class="twikiLink">Research Activities</a>
+</li></ul> 
+<hr />
+<strong>Facilities</strong> <ul>
+<li> <a href="CseLabs.html" class="twikiLink">Laboratories</a>
+</li> <li> <a href="CseDeptLibrary.html" class="twikiLink">Department Library</a>
+</li> <li> <a href="CseSeminarHall.html" class="twikiLink">Seminar Hall</a>
+</li> <li> <a href="Placements.html" class="twikiLink">Placements</a>
+</li></ul> 
+<hr />
+<strong>Other Activities</strong> <ul>
+<li> <a href="CseACM.html" class="twikiLink">ACM Student Chapter</a>
+</li> <li> <a href="CseIso.html" class="twikiLink">ISO Activities</a>
+</li> <li> <a href="CseIii.html" class="twikiLink">Industry-Institute Interaction</a>
+</li> <li> <a href="http://www.ssn.net/twiki/bin/login/CseIntranet/CseNba?origurl=%2Ftwiki%2Fbin%2Fview%2FCseIntranet%2FCseNba" class="twikiLink">NBA</a>
+</li> <li> <a href="CseMonthlyActivities.html" class="twikiLink">Monthly Activities</a>
+</li> <li> <a href="CseMentorActivity.html" class="twikiLink">Mentor Activity</a>
+</li></ul> 
+<hr /> <ul>
+<li> <a href="CseResponsibilities.html" class="twikiLink">Responsibilities</a>
+</li> <li> <a href="http://www.ssn.net/twiki/bin/login/CseIntranet/CseBudget?origurl=%2Ftwiki%2Fbin%2Fview%2FCseIntranet%2FCseBudget" class="twikiLink">Department Budget</a>
+</li> <li> <a href="CseCourseArchives.html" class="twikiLink">Course Archives</a>
+</li> <li> <B><a href="http://www.ssn.net/twiki/bin/view/SsnIntranet/WebHome" class="twikiLink"><img width="16" alt="home" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/home.gif" height="16" border="0" />SSN Home</a></B>
+</li></ul> 
+<p />
+<hr />
+<p /> <ul>
+<li> <a href="WebSearch.html" class="twikiLink"> <img width="16" alt="searchtopic" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/searchtopic.gif" height="16" border="0" /> Search</a>
+</li> <li> <a href="WebChanges.html" class="twikiLink"> <img width="16" alt="changes" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/changes.gif" height="16" border="0" /> Changes</a>
+</li> <li> <a href="WebNotify.html" class="twikiLink"> <img width="16" alt="notify" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/notify.gif" height="16" border="0" /> Notifications</a>
+</li> <li> <a href="WebStatistics.html" class="twikiLink"> <img width="16" alt="statistics" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/statistics.gif" height="16" border="0" /> Statistics</a>
+</li> <li> <a href="WebPreferences.html" class="twikiLink"> <img width="16" alt="wrench" align="top" src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/wrench.gif" height="16" border="0" /> Preferences</a>
+</li></ul> 
+<p />
+<hr />
+<!-- <ul>
+<li> <strong>Webs</strong>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/BmeIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;BmeIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/CheIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;CheIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/ChemIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;ChemIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/CivilIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#00CCFF" />&nbsp;CivilIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/CseIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#33CCFF" />&nbsp;CseIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/EceIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;EceIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/EeeIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;EeeIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/HumanitiesIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;HumanitiesIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/ItIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;ItIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/Main/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#FFEFA6" />&nbsp;Main</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/MathsIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;MathsIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/MbaIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;MbaIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/McaIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;McaIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/MechIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;MechIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/PhyIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#66CCFF" />&nbsp;PhyIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/Sandbox/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#B9DAFF" />&nbsp;Sandbox</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/SaseIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#00CCFF" />&nbsp;SaseIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/SomcaIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#CCFFFF" />&nbsp;SomcaIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/SsnIntranet/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#FFFFFF" />&nbsp;SsnIntranet</a></span>
+</li> <li> <span style="white-space:nowrap"><a href="/twiki/bin/view/TWiki/WebHome"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiDocGraphics/web-bg.gif" border="0" alt="" width="16" height="16" style="background-color:#FFD8AA" />&nbsp;TWiki</a></span>
+</li></ul> 
+<p /> <ul>
+<li> <a href="/twiki/bin/view/CseIntranet/WebTopicCreator?parent=CseUnitTests" target="_top"> <img width="16" alt="newtopic" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/newtopic.gif" height="16" border="0" /> Create New Topic</a>
+</li> <li> <a href="/twiki/bin/view/CseIntranet/WebTopicList" class="twikiLink"> <img width="16" alt="index" align="top" src="/twiki/pub/TWiki/TWikiDocGraphics/index.gif" height="16" border="0" /> Index</a>
+</li></ul> 
+-->
+</div><!-- /patternLeftBarContents--></div><!-- /patternLeftBar-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--></div><!-- /patternWrapper--><div id="patternTopBar"><div id="patternTopBarContents"><table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin-top:11px;">
+<tr><td valign="middle"><a href="http://www.ssn.edu.in/cse_aboutdept.htm"><img src="http://www.ssn.net/twiki/pub/SsnIntranet/SsnLogos/logo.jpg" border="0" alt="Powered by SSN Institutions" /></a></td>
+<td align="right" valign="top" class="patternMetaMenu">
+ <ul>
+<li> <form name="jumpForm" action="http://www.ssn.net/twiki/bin/view/CseIntranet/CseUnitTests"><input id="jumpFormField" type="text" class="twikiInputField patternFormFieldDefaultColor" name="topic" size="14" value="Jump" onfocus="clearDefaultandCSS(this);" onblur="setDefaultText(this);" /></form>
+</li> <li> <form name="quickSearchForm" action="http://www.ssn.net/twiki/bin/view/CseIntranet/WebSearch"><input type="text" class="twikiInputField patternFormFieldDefaultColor" name="search" value="Search" size="14" onfocus="clearDefaultandCSS(this);" onblur="setDefaultText(this);" /></form>
+</li> <li> 
+</li></ul> 
+</td></tr></table></div></div><!-- /patternTopBar--><div id="patternBottomBar"><div id="patternBottomBarContents"><span class="twikiRight"> <a href="http://twiki.org/"><img src="http://www.ssn.net/twiki/pub/TWiki/TWikiLogos/T-logo-80x15.gif" alt="This site is powered by the TWiki collaboration platform" width="80" height="15" title="This site is powered by the TWiki collaboration platform" border="0" /></a></span>Copyright &copy; by the contributing authors. All material on this collaboration platform is the property of the contributing authors at SSN Institutions. <br /> Ideas, requests, problems regarding SSN Institutions? <a href='mailto:tsg@ssn.edu.in?subject=SSN Institutions&#32;Feedback&#32;on&#32;CseIntranet.CseUnitTests'>Send feedback</a> 
+</div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body></html>
