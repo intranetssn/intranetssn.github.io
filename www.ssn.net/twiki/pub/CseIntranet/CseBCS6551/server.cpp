@@ -1,3 +1,33 @@
+//My SQlConnection CODE
+
+package secure;
+import java.sql.*;
+import javax.swing.*;
+
+public class MySqlConnection 
+{
+    public static Connection con=null;
+    public static Connection ConnectToDb()
+    {
+        try
+        {
+            Class.forName("com.mysql.jdbc.Driver");
+             con=DriverManager.getConnection("jdbc:mysql://localhost/fts", "root", "vijay123");
+          //JOptionPane.showMessageDialog(null,"Connected to Database");
+            return con;
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+            return null;
+        }
+    }
+}
+****************************************************************************************************************
+****************************************************************************************************************
+
+
+
 //LOGIN CODE
 
 package secure;
