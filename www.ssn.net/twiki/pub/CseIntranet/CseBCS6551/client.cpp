@@ -1,2099 +1,1897 @@
-//1
-#include<stdio.h>
-#include<ctype.h>
-void main()
-{
-    char ch,arioperators[]="+-*/%=",logoperators[]="&|!",lexmes[]="=,>,<",special[]="{}";
-    FILE *fp;
-    int i,j,flag=0;
-    fp = fopen("a.txt","r");
-    if(fp==NULL)
-    {
-        printf("File not found");
-        exit(0);
-    }
-    else if(fp!=NULL)
-    {
-        while((ch = fgetc(fp)) != EOF)
-        {
-            if(ch =='\n')
-            {
-                printf("\n");
-            }
-             if(isspace(ch))
-            {
-                printf(" ");
-            }
-             if(ch =='\t')
-            {
-                printf("\t");
-            }
+//11
 
-                //ARITHMETIC OPERATORS
-            for(i=0;i<=5;i++)
-            {
-                if(ch ==arioperators[i])
-                {
-                    switch(ch)
-                    {
-                        case '+':printf("PLUS");
-                                 printf(" ");
-                                break;
-                        case '-':printf("MINUS");
-                                printf(" ");
-                                 break;
-                        case '*':printf("STAR");
-                                printf(" ");
-                                 break;
-                        case '%':printf("MODULO");
-                                printf(" ");
-                                 break;
+import java.util.Scanner;
 
-                    }
-                }
-            }
-
-            //LOGICAL OPERATORS
-            for(i=0;i<=3;i++)
-            {
-                if(ch == logoperators[i])
-                {
-                    switch(ch)\
-                    {
-                        case '&':ch = fgetc(fp);
-                                 if(ch =='&')
-                                 {
-                                     printf("AND");
-                                     printf(" ");
-                                 }
-                                 break;
-                        case '|':ch = fgetc(fp);
-                                 if(ch == '|')
-                                 {
-                                     printf("OR");
-                                     printf(" ");
-                                 }
-                                 break;
-                        case '!':printf("NOT");
-                                printf(" ");
-                                 break;
-                    }
-                }
-            }
-
-
-
-             if(isalpha(ch))
-            {
-            switch(ch)
-            {
-              case 'f':ch = fgetc(fp);
-                        if(ch=='l')
-                        {
-                            ch = fgetc(fp);
-                            if(ch=='o')
-                            {
-                                ch = fgetc(fp);
-                                if(ch=='a')
-                                {
-                                    ch = fgetc(fp);
-                                    {
-                                        if(ch=='t')
-                                        {
-                                            printf("KW");
-                                            printf(" ");
-                                            ch = fgetc(fp);
-                                            if(isspace(ch))
-                                            {
-                                                printf(" ");
-                                            }
-                                            ch = fgetc(fp);
-                                            if(isalpha(ch))
-                                            {
-                                                printf("ID");
-                                                printf(" ");
-                                                while(ch !='=')
-                                                {
-                                                    ch = fgetc(fp);
-                                                    if(ch==';')
-                                                    {
-                                                        printf("SP");
-                                                        break;
-                                                    }
-
-                                                }
-
-                                            }
-                                            
-                                            if(ch=='=')
-                                            {
-                                                printf("ASSIGN");
-                                                printf(" ");
-                                            }
-                                            ch = fgetc(fp);
-                                            if(isdigit(ch))
-                                            {
-                                                printf("FLOATCONST");
-                                                printf(" ");
-                                                while(ch !=';')
-                                                {
-                                                    ch = fgetc(fp);
-                                                    if(ch==';')
-                                                    {
-                                                        printf("SP");
-                                                    }
-                                                }
-
-                                            }
-                                else if(isalpha(ch))
-                                    {
-                                     printf("ID");
-                                     printf(" ");
-                                     while(isalpha(ch))
-                                     {
-                                         ch = fgetc(fp);
-                                     }
-                            for(i=0;i<=5;i++)
-                            {
-                            if(ch ==arioperators[i])
-                            {
-                            switch(ch)
-                            {
-                                case '+':printf("PLUS");
-                                        printf(" ");
-                                        break;
-                                case '-':printf("MINUS");
-                                        printf(" ");
-                                        break;
-                                case '*':printf("STAR");
-                                        printf(" ");
-                                        break;
-                                case '%':printf("MODULO");
-                                        printf(" ");
-                                        break;
-
-                        }
-                        }
-                        }
-                                ch = fgetc(fp);
-                                if(isalpha(ch))
-                                {
-                                    printf("ID");
-                                    printf(" ");
-                                    while(ch!=';')
-                                    {
-                                        ch = fgetc(fp);
-                                        if(ch==';')
-                                        {
-                                            printf("SP");
-                                            break;
-                                        }
-                                    }
-                                }
-
-                                 }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        else if(ch=='o')
-                        {
-                            ch = fgetc(fp);
-                            if(ch=='r')
-                            {
-                                printf("FN");
-                                while(ch !='\n')
-                                {
-                                    ch = fgetc(fp);
-                                }
-                            }
-                        }
-                        break;
-
-            case 'w':ch = fgetc(fp);
-                    if(ch=='h')
-                    {
-                        ch = fgetc(fp);
-                        if(ch=='i')
-                        {
-                            ch = fgetc(fp);
-                            if(ch=='l')
-                            {
-                                ch = fgetc(fp);
-                                if(ch=='e')
-                                {
-                                    printf("FN");
-                                    printf(" ");
-                                    while(ch !='\n')
-                                    {
-                                        ch = fgetc(fp);
-
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-            case 'i':ch = fgetc(fp);
-                     if(ch=='n')
-                     {
-                         ch = fgetc(fp);
-                         if(ch=='t')
-                         {
-                             printf("KW");
-                             printf(" ");
-                             ch = fgetc(fp);
-                             if(isspace(ch))
-                             {
-                                 printf(" ");
-                             }
-                             ch = fgetc(fp);
-                             if(isalpha(ch))
-                             {
-                                 printf("ID");
-                                 printf(" ");
-                                 while(ch!='=')
-                                 {
-                                     ch = fgetc(fp);
-                                      if(ch==';')
-                                    {
-                                     printf("SP");
-                                     break;
-                                    }
-                                 }
-                                 if(ch=='=')
-                                 {
-                                     printf("ASSIGN");
-                                     printf(" ");
-                                 }
-
-                                 ch = fgetc(fp);
-                                 if(isdigit(ch))
-                                 {
-                                     printf("NUMCONST");
-                                     printf(" ");
-                                     while(ch !=';')
-                                     {
-                                         ch =fgetc(fp);
-                                         if(ch==';')
-                                         {
-                                             printf("SP");
-                                             break;
-                                         }
-                                     }
-
-                                 }
-                                 else if(isalpha(ch))
-                                 {
-                                     printf("ID");
-                                     printf(" ");
-                                     while(isalpha(ch))
-                                     {
-                                         ch = fgetc(fp);
-                                     }
-                            for(i=0;i<=5;i++)
-                            {
-                            if(ch ==arioperators[i])
-                            {
-                            switch(ch)
-                            {
-                                case '+':printf("PLUS");
-                                        printf(" ");
-                                        break;
-                                case '-':printf("MINUS");
-                                        printf(" ");
-                                        break;
-                                case '*':printf("STAR");
-                                        printf(" ");
-                                        break;
-                                case '%':printf("MODULO");
-                                        printf(" ");
-                                        break;
-
-                        }
-                        }
-                        }
-                                ch = fgetc(fp);
-                                if(isalpha(ch))
-                                {
-                                    printf("ID");
-                                    printf(" ");
-                                    while(ch!=';')
-                                    {
-                                        ch = fgetc(fp);
-                                        if(ch==';')
-                                        {
-                                            printf("SP");
-                                            break;
-                                        }
-                                    }
-                                }
-
-                                 }
-                             }
-                         }
-
-                     }
-                     else if(ch =='f')
-                          {
-                              printf("KW");
-                              printf(" ");
-                              ch = fgetc(fp);
-                              if(ch =='(')
-                              {
-                                  printf("SP");
-                                  printf(" ");
-                                  while(ch !=')')
-                                  {
-                                      ch = fgetc(fp);
-                                      if(isalpha(ch))
-                                      {
-
-                                          while(isalpha(ch))
-                                          {
-                                              ch = fgetc(fp);
-                                          }
-                                      }
-                                      printf("ID");
-                                      printf(" ");
-                                      for(i=0;i<=6;i++)
-                                      {
-                                         if(ch==lexmes[i])
-                                        {
-                                          printf("RELOP");
-                                          printf(" ");
-                                        }
-                                      }
-
-                                      if(isspace(ch))
-                                      {
-                                          printf(" ");
-                                      }
-                                  }
-                                  printf("SP");
-                                  printf(" ");
-                              }
-
-                          }
-                     break;
-
-            case 'e':ch = fgetc(fp);
-                         if(ch=='l')
-                         {
-                             ch = fgetc(fp);
-                             if(ch=='s')
-                             {
-                                 ch = fgetc(fp);
-                                 if(ch=='e')
-                                 {
-                                     ch = fgetc(fp);
-                                     if(isspace(ch))
-                                     {
-                                         ch = fgetc(fp);
-                                         if(ch=='i')
-                                         {
-                                             ch = fgetc(fp);
-                                             if(ch=='f')
-                                             {
-                                                 printf("KW");
-                                                 printf(" ");
-                                                 ch =fgetc(fp);
-                                                 if(ch=='(')
-                                                 {
-                                                     printf("SP");
-                                                     printf(" ");
-                                                     while(ch!=')')
-                                                     {
-                                                         ch = fgetc(fp);
-                                                         if(isalpha(ch))
-                                                         {
-                                                             while(isalnum(ch))
-                                                             {
-                                                                 ch = fgetc(fp);
-                                                             }
-                                                         }
-                                                         printf("ID");
-                                                         printf(" ");
-                                                          if(isspace(ch))
-                                                         {
-                                                             printf(" ");
-                                                         }
-                                                         for(i=0;i<=6;i++)
-                                                         {
-                                                             if(ch==lexmes[i])
-                                                             {
-                                                                 printf("RELOP");
-                                                                 printf(" ");
-                                                             }
-                                                         }
-                                                     }
-                                                     printf("SP");
-                                                     printf(" ");
-                                                 }
-                                             }
-                                         }
-                                         else
-                                         {
-                                             printf("KW");
-                                             printf(" ");
-                                             printf("\n");
-                                         }
-                                     }
-                                 }
-
-                             }
-                         }
-                            break;
-            case 'r':ch = fgetc(fp);
-                        if(ch=='e')
-                        {
-                            ch = fgetc(fp);
-                            if(ch=='a')
-                            {
-                                ch = fgetc(fp);
-                                if(ch=='l')
-                                {
-                                    printf("KW");
-                                    printf(" ");
-                                    ch = fgetc(fp);
-                                    if(isspace(ch))
-                                    {
-                                        printf(" ");
-                                    }
-                                    ch = fgetc(fp);
-                                    if(isalpha(ch))
-                                    {
-                                        printf("ID");
-                                        printf(" ");
-                                while(ch!='=')
-                                 {
-                                     ch = fgetc(fp);
-                                      if(ch==';')
-                                    {
-                                     printf("SP");
-                                     break;
-                                    }
-                                 }
-                                 if(ch=='=')
-                                 {
-                                     printf("ASSIGN");
-                                     printf(" ");
-                                 }
-                                 ch = fgetc(fp);
-                                 if(isdigit(ch))
-                                 {
-                                     printf("EXPCONST");
-                                     printf(" ");
-                                     while(ch !=';')
-                                     {
-                                         ch = fgetc(fp);
-                                         if(ch==';')
-                                         {
-                                             printf("SP");
-                                             break;
-                                         }
-                                     }
-                                 }
-                                 else if(isalpha(ch))
-                                 {
-                                     printf("ID");
-                                     printf(" ");
-                                     while(isalpha(ch))
-                                     {
-                                         ch = fgetc(fp);
-                                     }
-                            for(i=0;i<=5;i++)
-                            {
-                            if(ch ==arioperators[i])
-                            {
-                            switch(ch)
-                            {
-                                case '+':printf("PLUS");
-                                        printf(" ");
-                                        break;
-                                case '-':printf("MINUS");
-                                        printf(" ");
-                                        break;
-                                case '*':printf("STAR");
-                                        printf(" ");
-                                        break;
-                                case '%':printf("MODULO");
-                                        printf(" ");
-                                        break;
-
-                        }
-                        }
-                        }
-                                ch = fgetc(fp);
-                                if(isalpha(ch))
-                                {
-                                    printf("ID");
-                                    printf(" ");
-                                    while(ch!=';')
-                                    {
-                                        ch = fgetc(fp);
-                                        if(ch==';')
-                                        {
-                                            printf("SP");
-                                            break;
-                                        }
-                                    }
-                                }
-
-                                 }
-
-
-
-                                    }
-                                }
-                            }
-                        }
-                        break;
-            case 'p':ch = fgetc(fp);
-                          if(ch=='r')
-                          {
-                              ch = fgetc(fp);
-                              if(ch=='i')
-                              {
-                                  ch = fgetc(fp);
-                                  if(ch=='n')
-                                  {
-                                      ch = fgetc(fp);
-                                      if(ch=='t')
-                                      {
-                                          ch = fgetc(fp);
-                                          if(ch=='f')
-                                          {
-                                              printf("FN");
-                                              printf(" ");
-                                          }
-                                      }
-                                  }
-                              }
-                          }
-                          while(ch !='\n')
-                          {
-                              ch = fgetc(fp);
-                          }
-                          printf("\n");
-                          break;
-            case 's':ch = fgetc(fp);
-                          if(ch=='c')
-                          {
-                              ch = fgetc(fp);
-                              if(ch=='a')
-                              {
-                                  ch = fgetc(fp);
-                                  if(ch=='n')
-                                  {
-                                      ch = fgetc(fp);
-                                      if(ch=='f')
-                                      {
-                                          printf("FN");
-                                          printf(" ");
-                                      }
-                                  }
-                              }
-                          }
-                          while(ch !='\n')
-                          {
-                              ch = fgetc(fp);
-                          }
-                          printf("\n");
-                          break;
-
-                case 'm':ch=fgetc(fp);
-                         if(ch=='a')
-                         {
-                             ch = fgetc(fp);
-                             if(ch=='i')
-                             {
-                                 ch = fgetc(fp);
-                                 if(ch=='n');
-                                 {
-                                     ch = fgetc(fp);
-                                     if(ch=='(')
-                                     {
-                                         ch = fgetc(fp);
-                                         if(ch ==')')
-                                         {
-                                             printf("FN");
-                                             printf(" ");
-                                         }
-                                     }
-                                     else
-                                     {
-                                         printf("KW");
-                                         printf(" ");
-                                     }
-
-                                 }
-                             }
-                         }
-                         while(ch!='\n')
-                         {
-                             ch = fgetc(fp);
-                         }
-                         printf("\n");
-                         break;
-
-
-
-            default:printf("ID");
-                    printf(" ");
-                    while(ch !='=')
-                    {
-                        ch = fgetc(fp);
-                    }
-                    if(ch=='=')
-                    {
-                        printf("ASSIGN");
-                        printf(" ");
-                    }
-                    ch = fgetc(fp);
-                    if(isalpha(ch))
-                    {
-                        printf("ID");
-                        printf(" ");
-                        while(isalpha(ch))
-                        {
-                            ch = fgetc(fp);
-                        }
-                        for(i=0;i<=5;i++)
-                            {
-                            if(ch ==arioperators[i])
-                            {
-                            switch(ch)
-                            {
-                                case '+':printf("PLUS");
-                                        printf(" ");
-                                        break;
-                                case '-':printf("MINUS");
-                                        printf(" ");
-                                        break;
-                                case '*':printf("STAR");
-                                        printf(" ");
-                                        break;
-                                case '%':printf("MODULO");
-                                        printf(" ");
-                                        break;
-
-                        }
-                        }
-                        }
-                        ch = fgetc(fp);
-                                if(isalpha(ch))
-                                {
-                                    printf("ID");
-                                    printf(" ");
-                                    while(ch!=';')
-                                    {
-                                        ch = fgetc(fp);
-                                        if(ch==';')
-                                        {
-                                            printf("SP");
-                                            break;
-                                        }
-                                    }
-                                }
-
-                    }
-            }//end of switch
-        }
-        if(ch == '/')//for comments
-            {
-
-                ch = fgetc(fp);
-                if(ch == '/')
-                {
-                    printf("SLC");
-                    printf(" ");
-		    printf("\n");
-                    while(ch !='\n')
-                        {
-                            ch = fgetc(fp);
-                        }
-                }
-                else if(ch == '*')
-                {
-                    printf("Start of MLC");
-                    printf(" ");
-                    while(ch !='*')
-                    {
-                        ch = fgetc(fp);
-                        printf(" ");
-			if(ch == '\n')
-			{
-			 printf("\n");
+public class Ceasar{
+	
+	public static String encrypt(String plainText,int shift){
+		if(shift>26){
+			shift = shift%26;
+		}
+		else if(shift<0){
+			shift = (shift%26)+26;
+		}
+		String cipherText = "";
+		int length = plainText.length();
+		for(int i=0;i<length;i++){
+			char ch = plainText.charAt(i);
+			if(Character.isLetter(ch)){
+				if(Character.isLowerCase(ch)){
+					char c = (char)(ch+shift);
+					if(c>'z'){
+						cipherText += (char)(ch - (26-shift));
+					}
+					else{
+						cipherText += c;
+					}
+				}
+				else if(Character.isUpperCase(ch)){
+					char c = (char)(ch+shift);
+					if(c>'Z'){
+						cipherText += (char)(ch - (26-shift));
+					}
+					else{
+						cipherText += c;
+					}
+					
+				}
 			}
-                    }
-                   while(ch !='/')
-                   {
-                       ch = fgetc(fp);
-                       printf(" ");
-                   }
-                   printf("END OF MLC");
-                   printf(" ");
+			else {
+				cipherText += ch;	
+			}
+			
+		}
+		return cipherText;
+		
+	}
+	public static String decrypt(String cipherText,int shift){
+		if(shift>26){
+			shift = shift%26;
+		}
+		else if(shift<0){
+			shift = (shift%26)+26;
+		}
+		String plainText = "";
+		int length = cipherText.length();
+		for(int i=0;i<length;i++){
+			char ch = cipherText.charAt(i);
+			if(Character.isLetter(ch)){
+				if(Character.isLowerCase(ch)){
+					char c = (char)(ch-shift);
+					if(c<'a'){
+						plainText += (char)(ch + (26-shift));
+					}
+					else{
+						plainText += c;
+					}
+				}
+				else if(Character.isUpperCase(ch)){
+					char c = (char)(ch-shift);
+					if(c<'A'){
+						plainText += (char)(ch + (26-shift));
+					}
+					else{
+						plainText += c;
+					}
+					
+				}
+			}
+			else {
+				plainText += ch;	
+			}
+		}
+		return plainText;
+		
+	}
+        public static void cryptAnalysis(String cipherText){
+            for(int shift = 1;shift < 26;shift++){
+            System.out.println("shift:" + shift + "==" + decrypt(cipherText,shift) );
+            }
+        
+        
+        }
+	
+	public static void main(String[] args){
+		
+		Scanner in  = new Scanner(System.in);
+		System.out.println("Enter the Plaintext:");
+		String text = in.nextLine();
+		System.out.println("Enter the shiftKey");
+		int shiftnum = in.nextInt();
+		String cipher = encrypt(text,shiftnum);
+		System.out.println(cipher);
+		System.out.println("Do You want to decrypt(press d) for cryptanalysis(press c)");
+		char choice = in.next().charAt(0);
+                switch(choice){
+                    case 'd': String plainText = decrypt(cipher,shiftnum);
+                            System.out.println(plainText);
+                            break;
+                        
+                    case 'c':cryptAnalysis(cipher);
+                            break;
+                    default:System.out.println("WRONG CHOICE");
+                            break;
+                }
+                
+                
+  
+	}
+	
+	
+}
 
+
+
+
+//22 ********************************************************
+
+
+
+import java.awt.Point;
+import java.util.Scanner;
+
+public class PlayFairCipher{
+  
+    
+    
+  private int length = 0;
+  private String [][] table;
+  
+  
+  public static void main(String[] args){
+    PlayFairCipher pf = new PlayFairCipher();
+  }
+  
+  
+  private PlayFairCipher(){
+  
+    
+    System.out.println("Enter the keyword");
+    Scanner sc = new Scanner(System.in);
+    String keyword = parseString(sc);
+    while(keyword.equals(""))
+      keyword = parseString(sc);
+    System.out.println();
+    table = this.cipherTable(keyword);
+     
+       
+    System.out.println("Enter the message to encrypt");
+    String input = parseString(sc);
+    while(input.equals(""))
+      input = parseString(sc);
+    System.out.println();
+    
+        
+    this.printTable(table);
+    String output = encrypt(input);
+    this.printResultsEncoded(output);
+    System.out.println("Do u want to Decrypt y==yes||n=no");
+    char choice = sc.next().charAt(0);
+    if(choice=='y'||choice=='Y'){
+    String decryptedOutput = decrypt(output);
+    this.printResultsDecoded(decryptedOutput);
+    }
+    else if(choice=='n'||choice=='N'){
+    System.exit(0);
+    }
+  }
+  
+
+  private String parseString(Scanner s){
+    String parse = s.nextLine();
+    parse = parse.toUpperCase();
+    parse = parse.replaceAll("[^A-Z]", "");
+    parse = parse.replace("I", "J");
+    return parse;
+  }
+  
+  
+  private String[][] cipherTable(String key){
+    String[][] playfairTable = new String[5][5];
+    String keyString = key + "ABCDEFGHIKLMNOPQRSTUVWXYZ";
+    
+
+    for(int i = 0; i < 5; i++)
+      for(int j = 0; j < 5; j++)
+        playfairTable[i][j] = "";
+    
+    for(int k = 0; k < keyString.length(); k++){
+      boolean repeat = false;
+      boolean used = false;
+      for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++){
+          if(playfairTable[i][j].equals("" + keyString.charAt(k))){
+            repeat = true;
+          }else if(playfairTable[i][j].equals("") && !repeat && !used){
+            playfairTable[i][j] = "" + keyString.charAt(k);
+            used = true;
+          }
+        }
+      }
+    }
+    return playfairTable;
+  }
+  
+
+  private String encrypt(String in){
+    length = (int) in.length() / 2 + in.length() % 2;       /*count length*/
+    
+ 
+    for(int i = 0; i < (length - 1); i++){
+      if(in.charAt(2 * i) == in.charAt(2 * i + 1)){         /*Checking next char is repeated one or not?*/
+        in = new StringBuffer(in).insert(2 * i + 1, 'X').toString();    /*if then insert X to that position*/
+        length = (int) in.length() / 2 + in.length() % 2;       /*recount length()*/
+      }
+    }
+    
+ 
+    String[] digraph = new String[length];
+    for(int j = 0; j < length ; j++){
+      if(j == (length - 1) && in.length() / 2 == (length - 1))
+        in = in + "X";
+      digraph[j] = in.charAt(2 * j) +""+ in.charAt(2 * j + 1);
+    }
+    
+    
+    String out = "";
+    String[] encDigraphs = new String[length];
+    encDigraphs = encodeDigraph(digraph);
+    for(int k = 0; k < length; k++)
+      out = out + encDigraphs[k];
+    return out;
+  }
+  
+
+  private String[] encodeDigraph(String di[]){
+    String[] enc = new String[length];
+    for(int i = 0; i < length; i++){
+      char a = di[i].charAt(0);
+      char b = di[i].charAt(1);
+      int r1 = (int) getPoint(a).getX();
+      int r2 = (int) getPoint(b).getX();
+      int c1 = (int) getPoint(a).getY();
+      int c2 = (int) getPoint(b).getY();
+      
+      
+      if(r1 == r2){
+        c1 = (c1 + 1) % 5;
+        c2 = (c2 + 1) % 5;
+        
+      
+      }else if(c1 == c2){
+        r1 = (r1 + 1) % 5;
+        r2 = (r2 + 1) % 5;
+      
+      
+      }else{
+        int temp = c1;
+        c1 = c2;
+        c2 = temp;
+      }
+      
+      
+      enc[i] = table[r1][c1] + "" + table[r2][c2];
+    }
+    return enc;
+  }
+  
+  
+  private String decrypt(String out){
+    String decoded = "";
+    for(int i = 0; i < out.length() / 2; i++){
+      char a = out.charAt(2*i);
+      char b = out.charAt(2*i+1);
+      int r1 = (int) getPoint(a).getX();
+      int r2 = (int) getPoint(b).getX();
+      int c1 = (int) getPoint(a).getY();
+      int c2 = (int) getPoint(b).getY();
+      if(r1 == r2){
+        c1 = (c1 + 4) % 5;
+        c2 = (c2 + 4) % 5;
+      }else if(c1 == c2){
+        r1 = (r1 + 4) % 5;
+        r2 = (r2 + 4) % 5;
+      }else{
+        int temp = c1;
+        c1 = c2;
+        c2 = temp;
+      }
+      decoded = decoded + table[r1][c1] + table[r2][c2];
+    }
+    return decoded;
+  }
+  
+  
+  private Point getPoint(char c){
+    Point pt = new Point(0,0);
+    for(int i = 0; i < 5; i++)
+      for(int j = 0; j < 5; j++)
+        if(c == table[i][j].charAt(0))
+          pt = new Point(i,j);
+    return pt;
+  }
+  
+  
+  private void printTable(String[][] printedTable){
+    System.out.println("This is the cipher table from the given keyword.");
+    System.out.println();
+    
+    for(int i = 0; i < 5; i++){
+      for(int j = 0; j < 5; j++){
+        System.out.print(printedTable[i][j]+" ");
+      }
+      System.out.println();
+    }
+    System.out.println();
+  }
+  
+  
+  private void printResultsEncoded(String enc){
+    System.out.println("This is the encoded message:");
+    System.out.println(enc);
+    System.out.println();
+  }
+  
+  private void printResultsDecoded(String dec){
+      System.out.println("This is the decoded mesage");
+      System.out.println(dec);
+  }
+  
+}
+
+
+
+	
+//33 *************************************************************
+
+import java.util.*;
+import java.lang.*;
+
+class Hill{
+static Scanner scanner;
+static char[] plainText;
+static char[] cipherText;
+static char[] key;
+static int temp;
+static String ch;
+static int opt,i,j,k,l,n,m,q;
+static char[][] matrix;
+static char[][] matrixInverse;
+static char[][] plainTextMatrix;
+static char[][] cipherTextMatrix;
+static List<Character> alphabetsList;
+static List<Character> keyList;
+static List<Character> differenceList;
+static List<Character> plainTextList;
+static List<Character> cipherTextList;
+
+public static void main(String[] args){
+scanner = new Scanner(System.in);
+
+do{
+matrix = new char[5][5];
+System.out.println("Enter key: ");
+key = scanner.nextLine().replace(" ","").toCharArray();
+
+n = (int)Math.sqrt(key.length);
+matrix = findMatrix(key);
+
+//Debug
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+System.out.print(matrix[i][j] + " ");
+}
+System.out.println(" ");
+}
+
+System.out.println("1.Encode\n2.Decode\nEnter option: ");
+opt = Integer.parseInt(scanner.nextLine());
+
+if(opt == 1)
+{
+System.out.println("Enter plain text: ");
+plainText = scanner.nextLine().replace(" ","").toCharArray();
+encode();
+}
+else
+{
+System.out.println("Enter cipher text: ");
+cipherText = scanner.nextLine().replace(" ","").toCharArray();
+decode();
+}
+
+System.out.println("Do you want to continue(y/n): ");
+ch = scanner.nextLine();
+
+}while(!ch.equals("n"));
+}
+
+public static char[][] findMatrix(char[] charArray){
+char[][] tempMatrix = new char[n][n];
+l = 0;
+
+for(i=0;i<n;i++)
+{
+for(j=0;j<n;j++)
+{
+tempMatrix[i][j] = charArray[l];
+l++;
+}
+}
+
+return tempMatrix;
+}
+
+public static char[][] findMatrix1(char[] charArray){
+q = charArray.length;
+m = (int)Math.ceil(((double)(q)/n));
+System.out.println(m);
+char[][] tempMatrix = new char[n][m];
+l = 0;
+
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+if(l<q)
+{
+tempMatrix[j][i] = charArray[l];
+l++;
+}
+else
+{
+tempMatrix[j][i] = 'x';
+}
+}
+}
+
+return tempMatrix;
+}
+
+public static void encode(){
+plainTextMatrix = findMatrix1(plainText);
+cipherTextMatrix = new char[n][m];
+
+//Debug
+for(i=0;i<n;i++)
+{
+for(j=0;j<m;j++)
+{
+System.out.print(plainTextMatrix[i][j] + " ");
+}
+System.out.println(" ");
+}
+
+int sum = 0;
+
+for(i=0;i<n;i++)
+{
+for(j=0;j<m;j++)
+{
+for(k=0;k<n;k++)
+{
+sum = sum + toASCII(matrix[i][k])*toASCII(plainTextMatrix[k][j]);
+}
+//System.out.println(sum);
+cipherTextMatrix[i][j] = toChar(sum);
+          sum = 0;
+}
+}
+
+//Debug
+System.out.println(" ");
+for(i=0;i<n;i++)
+{
+for(j=0;j<m;j++)
+{
+System.out.print(cipherTextMatrix[i][j] + " ");
+}
+System.out.println(" ");
+}
+
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+System.out.print(cipherTextMatrix[j][i]);
+}
+}
+}
+
+public static int toASCII(char ch){
+int a = 0;
+a = (int)(ch)-97;
+//System.out.println(a);
+return a;
+}
+
+public static char toChar(int ascii){
+char ch;
+ch = (char)((ascii%26)+97);
+return ch;
+}
+
+public static void decode(){
+matrixInverse = findInverse(matrix);
+
+
+cipherTextMatrix = findMatrix1(cipherText);
+plainTextMatrix = new char[n][m];
+
+//Debug
+for(i=0;i<n;i++)
+{
+for(j=0;j<m;j++)
+{
+System.out.print(cipherTextMatrix[i][j] + " ");
+}
+System.out.println(" ");
+}
+
+int sum = 0;
+
+for(i=0;i<n;i++)
+{
+for(j=0;j<m;j++)
+{
+for(k=0;k<n;k++)
+{
+sum = sum + toASCII(matrixInverse[i][k])*toASCII(cipherTextMatrix[k][j]);
+}
+//System.out.println(sum);
+plainTextMatrix[i][j] = toChar(sum);
+          sum = 0;
+}
+}
+
+//Debug
+System.out.println(" ");
+for(i=0;i<n;i++)
+{
+for(j=0;j<m;j++)
+{
+System.out.print(plainTextMatrix[i][j] + " ");
+}
+System.out.println(" ");
+}
+
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+System.out.print(plainTextMatrix[j][i]);
+}
+}
+
+}
+
+public static char[][] findInverse(char[][] mat){
+char[][] tempMatrix = new char[n][n];
+float det = 0;
+int detInverse = 0;
+for(i = 0; i < 3; i++)
+       det = det + (toASCII(mat[0][i])) * (toASCII(mat[1][(i+1)%3]) * toASCII(mat[2][(i+2)%3]) - toASCII(mat[1][(i+2)%3]) * toASCII(mat[2][(i+1)%3]));
+
+det = det%26;
+                if(det < 0)
+                    det += 26;
+detInverse = findDetInverse(det);
+
+System.out.println("\ndeterminant = " + det);
+System.out.println("\ndeterminant inverse = " + detInverse);
+
+//System.out.println("\nInverse of matrix is:");
+for(i = 0; i < 3; ++i)
+{
+for(j = 0; j < 3; ++j)
+{
+tempMatrix[i][j] = formatASCII((toASCII(mat[(j+1)%3][(i+1)%3]) * toASCII(mat[(j+2)%3][(i+2)%3])) - (toASCII(mat[(j+1)%3][(i+2)%3]) * toASCII(mat[(j+2)%3][(i+1)%3])));
+tempMatrix[i][j] = toChar(toASCII(tempMatrix[i][j]) * detInverse);
+}
+
+}
+
+return tempMatrix;
+}
+
+public static char formatASCII(float ascii){
+char ch;
+System.out.print(ascii + " ");
+if(ascii < 0)
+ascii = (ascii%26) + 26;
+ch = (char)((ascii%26)+97);
+System.out.print(ascii + " " + ch);
+System.out.println("");
+return ch;
+}
+
+static int findDetInverse(float a)
+    {
+        a = a % 26;
+        for (int x = 1; x < 26; x++)
+           if ((a * x) % 26 == 1)
+              return x;
+        return 1;
+    }
+}
+
+
+
+//44 *******************************************************
+
+package vigenere;
+
+
+import java.util.*;
+public class Vigenere {
+
+   
+    public static void main(String[] args) {
+        // TODO code application logic here
+        char mat[][]=new char[26][26];
+        String text,key=null;
+        char key1[]=new char[100];
+        
+        int choice,n1=0,n2=0;
+        Scanner myscanner=new Scanner(System.in);
+        while(true)
+        {
+        System.out.println("1.Encrypt\n2.Decrypt\nEnter your choice : ");
+        choice=myscanner.nextInt();
+        myscanner.nextLine();
+        if(choice==1)
+        {
+        System.out.println("Enter the plain text message : ");
+        text=myscanner.nextLine();
+        System.out.println("Enter the key : ");
+        key=myscanner.nextLine();
+        char alpha;
+        n1=text.length();n2=key.length();
+        if(n2<n1)
+        {
+            for(int i=0;i<n2;i++)
+                key1[i]=key.charAt(i);
+            int p=0;
+            for(int i=n2;i<=n1;i++)
+            {
+                key1[i]=key.charAt(p++);
+                if(p>=n2)
+                    p=0;
+            }
+        }
+        key1[n1]='\0';
+        for(int i=0;i<=n1;i++)
+            {
+            System.out.println(key1[i]);
+            }
+        for(int i=0;i<26;i++)
+        {
+            alpha='A';
+            for(int j=0,k=i;j<26;j++,k++)
+            {
+                if(k+65<=90)
+                mat[i][j]=(char)(k+65);
+                else
+                mat[i][j]=alpha++;
+            }
+        }
+        
+       for(int i=0;i<26;i++)
+        {
+            for(int j=0;j<26;j++)
+            {
+              System.out.print(mat[i][j]+" ");
+          
+            }System.out.print("\n");
+        }
+       
+       int row=0,col=0;
+       for(int c=0;c<n1;c++)
+       {
+        for(int i=0;i<26;i++)
+        {
+                if(text.charAt(c)==i+65)
+                {row=i;break;}
+        }   
+        
+        for(int i=0;i<26;i++)
+        {
+                if(key1[c]==i+65)
+                {col=i;break;}
+        }
+        System.out.print(mat[row][col]);
+    
+       }System.out.print("\n");
+    
+       
+    }else if(choice==2)
+    {
+        System.out.print("Enter the cipher text to decrypt : ");
+        String str=myscanner.nextLine();
+        for(int c=0;c<str.length();c++)
+        {
+        for(int i=0;i<26;i++)
+        {
+            if(key1[c]==i+65)
+            {
+                for(int j=0;j<26;j++)
+                {
+                    if(str.charAt(c)==mat[i][j])
+                    {System.out.print((char)(j+65));break;}  
+                }break;
+            }
+        }
+        
+        
+    }
+        System.out.print("\n");
+        
+        }else break;
+    }
+    
+}
+}
+
+
+
+//55 ********************************************************
+
+import java.util.*;
+public class RailFence {
+
+     public static void main(String[] args) {
+        // TODO code application logic here
+        String text;
+        String decrypt; 
+        int count=0,temp=0,ct=0;
+        
+        int key=0,choice;
+        char str[]=new char[100];int c=0;
+        
+        Scanner myscanner=new Scanner(System.in);
+        while(true)
+        {
+        System.out.println("1.Encrypt\n2.Decrypt\nEnter your choice");
+        choice=myscanner.nextInt();
+        if(choice==1)
+        {
+        myscanner.nextLine();
+        System.out.println("Enter the plain text : ");
+        text=myscanner.nextLine();
+        System.out.println("Enter the depth : ");
+        key=myscanner.nextInt();
+        char mat[][]=new char[key][text.length()];
+        while(ct<text.length())
+        {
+            if(count<key)
+            {
+                mat[count][ct]=text.charAt(temp++);
+                count++;ct++;
+            }
+            else {
+            count=0;
+            }
+          }
+        
+        for(int i=0;i<key;i++)
+        {
+            for(int j=0;j<text.length();j++)
+                System.out.print(mat[i][j]+" ");
+            System.out.print("\n");
+            
+        }
+         for(int i=0;i<key;i++)
+        {
+            for(int j=0;j<text.length();j++)
+            {
+                if(mat[i][j]!='\0')
+                {
+                   str[c++]=mat[i][j]; 
+                }
+            }
+        }
+         str[c]='\0';
+         
+         System.out.println("Cipher text:");
+         for(int i=0;i<str.length;i++)
+        {
+            System.out.print(str[i]);
+        }
+         System.out.print("\n");
+        }
+        
+         //DECRYPT
+        else if(choice==2)
+        {
+        myscanner.nextLine();
+        System.out.println("Enter the cipher text:");
+         
+        decrypt=myscanner.nextLine();
+        char matrix[][]=new char[key][decrypt.length()];
+         ct=0;count=0;
+         while(ct<decrypt.length())
+        {
+            if(count<key)
+            {
+                matrix[count][ct]='*';
+                count++;ct++;
+            }
+            else {
+            count=0;
+            }
+        }
+        
+        
+        int counter=0;
+        for(int i=0;i<key;i++)
+        {
+            for(int j=0;j<decrypt.length();j++)
+            {
+                if(matrix[i][j]=='*')
+                {
+                    matrix[i][j]=decrypt.charAt(counter++);
+                }
+            }
+        }
+        
+        ct=0;count=0;
+        System.out.println("Plain text:");
+        while(ct<decrypt.length())
+        {
+            if(count<key)
+            {
+                System.out.print(matrix[count][ct]);
+                count++;ct++;
+            }
+            else {
+            count=0;
+            }
+        }
+        System.out.print("\n");
+            
+        
+        }
+        else break;
+         
+        } 
+      }
+   }
+   
+ 
+
+ 
+ //66 ********************************************************
+import java.util.*;
+public class RowColCipher {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //TODO code application logic here
+        String key=null,text;
+        Scanner myscanner=new Scanner(System.in);
+        int count=0;
+        int p=0,c=0;
+        int counter=0,choice;
+        
+        
+        while(true)
+        {
+        
+        System.out.println("1.Encrypt\n2.Decrypt\nEnter your choice : ");
+        choice=myscanner.nextInt();
+        
+        if(choice==1)
+        {
+        char mat[][]=new char[100][100];
+        char tempstr[]=new char[100];
+        
+        myscanner.nextLine();
+        System.out.println("Enter the plain text :");
+        text=myscanner.nextLine();
+        System.out.println("Enter the key :");
+        key=myscanner.nextLine();
+        char encrypt[]=new char[text.length()];        
+        
+        count=0;
+        counter=0;
+        p=0;
+        c=0;
+        
+        while(count<text.length())
+        {
+            for(int j=0;j<key.length();j++)
+            { 
+                if(count<text.length())
+                mat[c][j]=text.charAt(count++);
+            }c++;
+        }
+        c--;
+        
+        while(p<=c)
+        {
+            for(int j=0;j<key.length();j++)
+            {
+               System.out.print(mat[p][j]+" ");
+            }
+            p++;
+            System.out.print("\n");
+        }
+        
+        
+        
+        for(int i=0;i<key.length();i++)
+        tempstr[i]=key.charAt(i);
+        
+        Arrays.sort(tempstr);
+        counter=0;
+        
+        for(int i=0;i<tempstr.length;i++)
+        {
+            for(int j=0;j<key.length();j++)
+            {
+            if(tempstr[i]==key.charAt(j))
+            {
+                p=0;
+                while(p<=c && counter<text.length())
+                {
+                    encrypt[counter++]=mat[p][j];
+                    p++;
+                }
+             break;
+            }
+            }
+        }
+
+        for(int i=0;i<encrypt.length;i++)
+        System.out.print(encrypt[i]);
+        
+        System.out.print("\n\n");
+        }
+        else if(choice==2)
+        {
+        char tempstr[]=new char[100];
+        
+        for(int i=0;i<key.length();i++)
+        tempstr[i]=key.charAt(i);
+        
+        Arrays.sort(tempstr);
+        
+        //decrypt*******************************************************
+        counter=0;
+        char encrypt[]=new char[100];
+        char mat1[][]=new char[100][100];
+        
+        myscanner.nextLine();
+        System.out.println("Enter the cipher text :");
+        text=myscanner.nextLine();
+        
+        for(int i=0;i<text.length();i++)
+            encrypt[i]=text.charAt(i);
+        
+       
+        for(int i=0;i<tempstr.length;i++)
+        {
+            for(int j=0;j<key.length();j++)
+            {
+            if(tempstr[i]==key.charAt(j))
+            {
+                p=0;
+                while(p<=c && counter<encrypt.length-1)
+                {
+                    mat1[p][j]=encrypt[counter++];
+                    p++;
+                }
+             break;
+            }
+            }
+        }
+        p=0;
+        while(p<=c)
+        {
+            for(int j=0;j<key.length();j++)
+            {
+               System.out.print(mat1[p][j]);
+            }
+            p++;
+        }
+        System.out.print("\n");
+        
+        
+        }
+        else break;
+        }
+          
+    }
+    
+}
+
+
+
+\\88 *************************************************** 
+
+import java.math.BigInteger;
+import java.util.*;
+
+public class RSA {
+
+        public static void main(String[] args) {
+        
+        String str;
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter Text:\t");
+        str=input.nextLine();
+        String str2="1";
+        for(int i=0; i<str.length(); i++){
+            int num=((int)str.charAt(i))-64;
+            if(num<10){
+                str2+="0";
+            }
+            str2+=num;
+        }
+        System.out.println("Message="+str2);
+            BigInteger p;//15487039//15487049
+            BigInteger q;
+            Random rand = new Random();
+            p=BigInteger.probablePrime(2048, rand);
+        q=p.nextProbablePrime();
+        BigInteger n = p.multiply(q);
+        System.out.println("p="+p);
+        System.out.println("q="+q);
+        System.out.println("n="+n);
+                       
+        BigInteger phi = new BigInteger("1");
+        phi = (p.subtract(phi)).multiply(q.subtract(phi));
+        System.out.println("phi="+phi);
+        
+		BigInteger e =BigInteger.probablePrime(1024, rand);
+                
+        while(phi.gcd(e).compareTo(BigInteger.ONE)>0 && e.compareTo(phi)<0){
+            e.add(BigInteger.ONE);
+        }
+                
+        System.out.println("e="+e);
+        BigInteger d=e.modInverse(phi);
+        System.out.println("d="+d);
+        
+        BigInteger m=new BigInteger(str2),
+        et=m.modPow(e, n),dt;
+        
+        System.out.println("et="+et);
+        dt=et.modPow(d, n);
+        System.out.println("dt="+dt);
+        String str3=dt.toString();
+        for(int i=1; i<str3.length(); i+=2){
+            char c=(char) (Integer.parseInt(str3.substring(i, i+2))+64);
+            System.out.print(c);
+        }
+    }
+    }
+
+	
+\\99 ********************************************************
+
+import java.util.Scanner;
+import java.math.BigInteger;
+
+public class DiffieHell {
+
+    public static void main(String args[])
+ {
+ Scanner sc=new Scanner(System.in);
+ 
+ System.out.println("Enter modulo(p)");
+ int p=sc.nextInt();
+ System.out.println("Enter primitive root of "+p);
+ int g=sc.nextInt();
+ System.out.println("Choose 1st secret no(Alice)");
+ int a=sc.nextInt();
+ System.out.println("Choose 2nd secret no(BOB)");
+ int b=sc.nextInt();
+ 
+ int A = (int)Math.pow(g,a)%p;
+ int B = (int)Math.pow(g,b)%p;
+ 
+ int S_A = (int)Math.pow(B,a)%p;
+ int S_B =(int)Math.pow(A,b)%p; 
+ 
+ if(S_A==S_B)
+ {
+ System.out.println("Alice and Bob can communicate with each other!!!");
+ System.out.println("They share a secret no = "+S_A); 
+ }
+ 
+ else
+ {
+ System.out.println("ALice and Bob cannot communicate with each other!!!");
+ }
+ } 
+}
+
+
+
+\\10 *************************************************
+package md5;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class MD5 {
+   
+    private static BigInteger init_A;
+    private static BigInteger init_B;
+    private static BigInteger init_C;
+    private static BigInteger init_D;
+     
+  private static final int[] shift = {
+    7, 12, 17, 22,
+    5,  9, 14, 20,
+    4, 11, 16, 23,
+    6, 10, 15, 21
+  };
+ 
+  private static final int[] k={
+    0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,
+      1,6,11,0,5,10,15,4,9,14,3,8,13,2,7,12,
+      5,8,11,14,1,4,7,10,13,0,3,6,9,12,15,2,
+      0,7,14,5,12,3,10,1,8,15,6,13,4,11,2,9
+  };
+ 
+ 
+ static double x;
+  private static final String[] table_t = new String[64];
+  private static final String[] T=new String [64];
+  static
+  {
+    for (int i = 0; i < 64; i++)
+    {
+        String s="4294967296";
+    BigDecimal p=new BigDecimal(s);
+    BigDecimal q=BigDecimal.valueOf(Math.abs(Math.sin(i+1)));
+     BigInteger temp=p.multiply(q).toBigInteger();
+        table_t[i]=temp.toString();
+        T[i]=temp.toString(2);
+        String t="";
+        if(T[i].length()<32)
+        {
+            for(int j=0;j<32-T[i].length();j++)
+            {
+               t+='0';
+            }
+            t+=T[i];
+            T[i]=t;
+          }
+    }
+  }
+
+    public static char AND(char i,char j)
+    {
+        if((i=='0' && j=='0')||(i=='0'&&j=='1')||(i=='1'&&j=='0'))
+            return '0';
+        else
+            return '1';
+         
+    }
+    public static char OR(char i,char j)
+    {
+        if(i=='0'&&j=='0')
+            return '0';
+        else
+            return '1';
+    }
+    public static char NOT(char i)
+    {
+        if(i=='0')
+            return '1';
+        else
+            return '0';
+    }
+    public static char xor(char i,char j)
+    {
+        if(i=='0'&&j=='1'||i=='1'&&j=='0')
+            return '1';
+        else
+            return '0';
+    }
+
+    public static String binary_ADD(String s1,String s2)
+    {
+      StringBuilder sb = new StringBuilder();
+    int i = s1.length() - 1, j = s2.length() -1, carry = 0;
+    while (i >= 0 || j >= 0) {
+        int sum = carry;
+        if (j >= 0) sum += s2.charAt(j--) - '0';
+        if (i >= 0) sum += s1.charAt(i--) - '0';
+        sb.append(sum % 2);
+        carry = sum / 2;
+    }
+   
+    return sb.reverse().toString();
+           
+    }
+    public static String func_F(String buffer1,String buffer2,String buffer3)
+    {
+        String temp="",temp1="",temp2="";
+        for(int i=0;i<32;i++)
+        {
+            temp+=AND(buffer1.charAt(i), buffer2.charAt(i));
+        }
+       
+           
+        for(int i=0;i<32;i++)
+        {
+            temp1+=AND(NOT(buffer1.charAt(i)), buffer3.charAt(i));
+        }
+       
+       
+        for(int i=0;i<32;i++)
+            temp2+=OR(temp.charAt(i), temp1.charAt(i));
+       
+        return temp2;
+
+    }
+   
+    public static String func_G(String buffer1,String buffer2,String buffer3)
+    {
+        String temp="",temp1="",temp2="";
+        for(int i=0;i<32;i++)
+        {
+            temp+=AND(buffer1.charAt(i), buffer3.charAt(i));
+        }
+       
+        for(int i=0;i<32;i++)
+        {
+            temp1+=AND(buffer2.charAt(i),NOT( buffer3.charAt(i)));
+        }
+        for(int i=0;i<32;i++)
+            temp2+=OR(temp.charAt(i), temp1.charAt(i));
+       
+        return temp2;
+    }
+   
+    public static String func_H(String buffer1,String buffer2,String buffer3)
+    {
+        String temp1="",temp2="";
+        for(int i=0;i<32;i++)
+        {
+            temp1+=xor(buffer1.charAt(i), buffer2.charAt(i));
+        }
+        for(int i=0;i<32;i++)
+        {
+            temp2+=xor(temp1.charAt(i), buffer3.charAt(i));
+        }
+       
+        return temp2;
+    }
+   
+    public static String func_I(String buffer1,String buffer2,String buffer3)
+    {
+        String temp1="",temp2="";
+        for(int i=0;i<32;i++)
+        {
+            temp1+=OR(buffer1.charAt(i), NOT(buffer3.charAt(i)));
+        }
+        for(int i=0;i<32;i++)
+        {
+            temp2+=xor(buffer2.charAt(i), temp1.charAt(i));
+        }
+       
+        return temp2;
+       
+    }
+    public static String conv_hex_plain(String plain)
+    {
+
+       
+        String temp="",temp1="",s1="",str="",copy;
+        copy=plain;
+        String len_4[]=new String[10];
+        int ind=0;
+        int length=0;
+        while(true)
+        {
+            if(plain.length()>=4)
+            {
+                if(plain.length()==4)
+                {
+                    str=plain.substring(0);
+                    plain="";
                 }
                 else
                 {
-                    printf("DIVIDE");
-                    printf(" ");
+                    str=plain.substring(0,4);
+                    plain=plain.substring(4);
                 }
-            }
-            for(i=0;i<=2;i++)
-            {
-                if(ch==special[i])
+               
+                for(int i=str.length()-1;i>=0;i--)
                 {
-                    printf("SP");
-                    printf(" ");
+                    temp+=Integer.toHexString(str.charAt(i));
                 }
-            }
-
-        }//main while loop
-
-    }
-    fclose(fp);
-    return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-//lex.l
-
-%{
-	#include<stdio.h>
-%}
-FN printf\(\"({letter}|{digit}|{SP}|\s)*\"\)\;|scanf\(\"\%({letter}|{digit}|{SP})*\"({letter}|{digit}|{SP})*\)\;|main\(\)
-
-letter [a-zA-Z]
-digit [0-9]
-identifier {letter}({letter}|{digit})*
-
-INTCONST {digit}+
-FRACTCONST {digit}*\.{digit}+
-EXPCONST {digit}*E(\+|-){digit}+
-CCONST \'{letter}*\'
-SCONST \"{letter}*\"
-
-AOPE \+|\-|\*|\/|% 
-LOPE &&|\|\||!
-ROPE <|<=|==|!=|>|>=
-
-ASI =
-SP \,|\;|\{|\}|\(|\)|\[|\]
-
-SLC \/\/({letter}|{digit})*
-MLC \/\*({letter}|{digit})*\n({letter}|{digit})*\*\/
-%%
-
-{FN} {	printf("FN ");
-		yytext="\n";}
-int|float|char|for|while|if|else {printf("KW ");}
-
-{identifier} {printf("ID ");}
-
-{INTCONST} {printf("INTCONST ");}
-{FRACTCONST} {printf("FRACTCONST ");}
-{EXPCONST} {printf("EXPCONST ");}
-
-{AOPE} {printf("AOPE ");}
-{LOPE} {printf("LOPE ");}
-{ROPE} {printf("ROPE ");}
-
-{CCONST} {printf("CHARCONST ");}
-{SCONST} {printf("STRCONST ");}
-{ASI} {printf("ASSIGN ");}
-
-{SP} {printf("SP ");}
-
-{SLC} {printf("SLC");}
-{MLC} {printf("MLC");}
-
-%%
-
-int main(int argc, char **argv)
-{
-yylex();
-return 0;
-}
-int yywrap()
-{
-return 1;
-}
-
-
-
-
-
-
-
-
-//symboltable.l
-%{
-#include<stdio.h>
-#include<string.h>
-
-char tempk[10];
-int i=0,j;
-
-struct table
-{
-char type[10];
-char name[10];
-char value[10];
-}T[30];
-%}
-
-
-id {letter}({letter}|{digit})*
-
-INTCONST {digit}+
-FLOATCONST {digit}*\.{digit}+
-EXPCONST {digit}*E(\+|-){digit}+
-
-KW int|float|char|real
-end [;]
-SP \{|\}|\(|\)|\[|\|,]
-
-FN printf\(\"({letter}|{digit}|{SP}|\s)*\"\)\;|scanf\(\"\%({letter}|{digit}|{SP})*\"({letter}|{digit}|{SP})*\)\;|main\(\)
-
-letter [a-zA-Z]
-digit [0-9]
-
-AOPE \+|\-|\*|\/|% 
-LOPE &&|\|\||!
-ROPE <|<=|==|!=|>|>=
-
-CCONST \'{letter}*\'
-SCONST \"{letter}*\"
-ASSIGN =
-
-SLC \/\/({letter}|{digit})*
-MLC \/\*({letter}|{digit})*\n({letter}|{digit})*\*\/
-
-%%
-
-{FN} {	printf("FN ");
-		yytext="\n";}
-{INTCONST} {
-	strcpy(T[i-1].value,yytext);	
-	printf("%s INTCONST ",yytext);
-}
-{FLOATCONST} {
-	strcpy(T[i-1].value,yytext);	
-	printf("%s FLOATCONST ",yytext);
-	}
-
-{EXPCONST} {
-	strcpy(T[i-1].value,yytext);
-	printf("%s EXPCONST",yytext);
-}
-
-{CCONST} {
-	strcpy(T[i-1].value,yytext);
-	printf("%s CHARCONST ",yytext);
-}
-{SCONST} {
-	strcpy(T[i-1].value,yytext);
-	printf("%s STRCONST ",yytext);
-		}
-{KW}  {
-	strcpy(tempk,yytext);
-	//strcpy(T[i].type,yytext);
-	printf("%s KW ",yytext);
-	
-	}
-
-{id} {  printf("%s ID",yytext);
-	strcpy(T[i].type,tempk);
-	strcpy(T[i].name,yytext);
-	strcpy(T[i].value,"0");
-	i++;
-	}
-
-{ASSIGN} { printf("%s ASSIGN ",yytext); }
-{AOPE} {  printf("%s AOPE ",yytext);}
-{ROPE} {  printf("%s ROPE ",yytext);}
-{LOPE} {  printf("%s LOPE ",yytext);}
-
-{SP}   {  printf("%s SP ",yytext);}
-
-{end} {
-
-        printf("\nType\tName\tValue\n");
- 	for(j=0;j<=i;j++)
-	 {
- 	printf("\n %s\t%s\t%s",T[j].type,T[j].name,T[j].value);
-
-	   }
-	
-	}
-
-%%
-
-
-int main()
-{
-yylex();
-return 0;
-}
-
-int yywrap()
-{
-return 1;
-}
-
-
-
-
-
-
-
-
-
-
-//calc.l
-%{
-#include"y.tab.h"
-int yyerror(char *);
-#include<stdio.h>
-#include<stdlib.h>	
-extern int yylval;
-%}
-const [0-9]+
-%%
-
-{const} {yylval=atoi(yytext);
-         return NUM;     }
-
-[\n] {return *yytext;}
-
-[(] {return *yytext;}
-[)] {return *yytext;}
-[*] {return *yytext;}
-[/] {return *yytext;}
-[-] {return *yytext;}
-[+] {return *yytext;}
-[/^] {return *yytext;}
-
-. {char msg[200];
-   sprintf(msg,"%s",yytext);
-   yyerror(msg);}
-
-%%
-
-
-
-
-
-//calc.y
-%{
-#include"y.tab.h"
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-int yylex(void);
-%}
-
-%token NUM
-
-%%
-S:E '\n'{printf("%d",$$);}
- ;
-E:E '+' T{ $$ = $1+$3;}
- |E '-' T{ $$ = $1-$3;}
- |T {$$=$1;}
- ;
-
-T:T '*' M{ $$ = $1*$3;}
- |T '/' M{ $$ = $1/$3;}
- |M {$$=$1;}
- ;
-
-M:N '^' M{ $$ =pow($1,$3);}
- |N { $$=$1;}
- ;
-
-N:'(' E ')' { $$ = $2;}
- |NUM{$$=$1;}
- ;
-
-%%
-int main()
-{
-  yyparse();
-}
-int yywrap()
-{
-  return 1;
-}
-int yyerror(char *s)
-{
-  fprintf(stderr,"%s",s);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-//synchk.l
-%{
-  #include <stdio.h>
-  #include <stdlib.h>
-  #include "y.tab.h"
-  int c;
-  extern int yylval;
-%}
-
-letter [a-zA-Z]
-digit [0-9]
-digits {digit}({digit})*
-identifier {letter}({letter}|{digit})*
-intConst ({digit})+
-fracConst ({digit})*\.{intConst}
-expConst {digits}E([\+|\-|])?{digits}
-charConst '{letter}'
-const {intConst}|{expConst}|{fracConst}|{charConst}
-KW int|char|float
-
-%%
-
-" "       ;
-
-if|else|for {return *yytext;}
-
-{KW}	{
-	        yylval = atoi(yytext);
-	        return(KEYWORD);
-      	}
-
-{identifier} {
-				        yylval = atoi(yytext);
-		            return(IDENTIFIER);
-			       }
-
-{const}   {
-            yylval = atoi(yytext);
-            return(CONSTANT);
-          }
-
-\=\=|\>\=|\<\=|\!\=|\>|\< {
-                            yylval = atoi(yytext);
-                            return(RELOP);
-                          }
-
-\+|\-|\\|\* {
-              yylval = atoi(yytext);
-              return(OP);
-            }
-
-=|\,|\;|\(|\) {return *yytext;}
-
-\n {return *yytext;}
-
-%%
-
-
-
-
-//synchk.y
-%{
-#include<stdio.h>
-#include "y.tab.h"
-#include<math.h>
-%}
-%token KEYWORD
-%token CONSTANT
-%token IDENTIFIER
-%token RELOP
-%token OP
-%%
-
-//Declaration and assignment
-START: S {printf("Correct syntax");}
-      ;
-
-
-
-S: KEYWORD E '\n' S
-  | A '\n' S
-  | C '\n' S
-  | LOOP '\n' S
-  | 
-  ;
-
-E: A
-  | D
-  |
-  ;
-
-//Assignment
-A: E IDENTIFIER '=' CONSTANT
-  | E IDENTIFIER '=' CONSTANT ','
-  ;
-
-//Declaration
-D: E IDENTIFIER
-  | E IDENTIFIER ','
-  ;
-
-//Conditional Statement
-C: 'if' '(' EXPR ')' '\n' STATEMENT '\n' 'else' '\n' STATEMENT
-    ;
-
-STATEMENT: IDENTIFIER '=' CONSTANT
-          | IDENTIFIER '=' IDENTIFIER OP CONSTANT
-          | IDENTIFIER '=' IDENTIFIER
-          ;
-
-EXPR: IDENTIFIER RELOP IDENTIFIER 
-      | IDENTIFIER RELOP CONSTANT
-      ;
-
-//Looping Statement
-LOOP: 'for' '(' STATEMENT ';' LOOPTWO ';' STATEMENT ')' '\n' STATEMENT
-      ;
-
-LOOPTWO: IDENTIFIER RELOP CONSTANT
-        ;
-
-
-
-%%
-int main()
-{
-    yyparse();
-    //return 0;
-}
-int yyerror(char *s)
-{
-    //printf("error:%s",s);
-}
-int yywrap()
-{
-  return(1);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-//ast.l
-%{
-#include"y.tab.h"
-int yyerror(char *);
-#include<stdio.h>
-#include<stdlib.h>	
-extern int yylval;
-%}
-const [0-9]+
-%%
-{const} {yylval=atoi(yytext);
-         return ID;     }
-[\n] {return *yytext;}
-[(] {return *yytext;}
-[)] {return *yytext;}
-[*] {return *yytext;}
-[/] {return *yytext;}
-[-] {return *yytext;}
-[+] {return *yytext;}
-[%] {return *yytext;}
-[/^] {return *yytext;}
-. {char msg[200];
-   sprintf(msg,"%s",yytext);
-   yyerror(msg);}
-%%
-
-
-
-
-//ast.y
-%{
-#include"y.tab.h"
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-int yylex(void);
-struct node
-{
- int val;
- struct node *left,*right;
-}n;
-%}
-%token ID
-%%
-S:E '\n'{}
- ;
-E:E '+' T{ struct node* start;
-     start=malloc(sizeof(struct node));
-     start->val='+';
-     start->left=$1;
-     start->right=$3;
-     printf("\nNode + has been created with %ld as left and %ld as right at address %ld",start->left,start->right,start);$$=start; }
- |T {$$=$1;}
- ;
-T:T '*' F{struct node* start;
-     start=malloc(sizeof(struct node));
-     start->val='*';
-     start->left=$1;
-     start->right=$3;
-     printf("\nNode * has been created with %ld as left and %ld as right at address %ld",start->left,start->right,start);$$=start; }
- |F {$$=$1;}
- ;
-F:ID{struct node* start;
-     start=malloc(sizeof(struct node));
-     start->val=$1;
-     start->left=start->right=NULL;
-     printf("[%ld <-%d-> %ld] :%ld\n",start->left,start->val,start->right,start);
-     //printf("\nNode %d has been created with %ld as left and %ld as right at address %ld",start->val,start->left,start->right,start);
-     $$=start;/*printf("value of $$ %ld\n",$$);*/}
- ;
-%%
-int main()
-{
-  yyparse();
-}
-int yywrap()
-{
-  return 1;
-}
-int yyerror(char *s)
-{
-  fprintf(stderr,"%s",s);
-}
-
-
-
-
-
-
-
-
-
-
-
-//typechk.l
-%{
-  #include <stdio.h>
-  #include <stdlib.h>
-  #include "y.tab.h"
-  int c;
-  extern int yylval;
-%}
-
-digit [0-9]
-letter [a-zA-Z]
-intConst [0-9]+
-fracConst ({digit})*\.{intConst}
-charConst '{letter}'
-
-%%
-
-" "       ;
-
-{charConst}   {
-                yylval = 1;
-                return(CHARCONST);
-              }
-
-{intConst}	{
-    	        yylval = 2;
-    	        return(INTCONST);
-      	     }
-
-{fracConst} {
-  			        yylval = 3;
-  	            return(FRACCONST);
-  		       }
-
-\+|\-|\/|\*|\=\=|\(|\) {return *yytext;}
-
-\n {return *yytext;}
-
-. {
-    yylval = 4;
-    return(OTHER);
-  }
-
-%%
-
-
-
-
-
-
-//typechk.y
-%{
-#include<stdio.h>
-#include "y.tab.h"
-#include<math.h>
-%}
-%token INTCONST
-%token FRACCONST
-%token CHARCONST
-%token OTHER
-%%
-
-START: S {
-                if($$ == 4)
-                  printf("INVALID\n");
-                else if($$ == 3)
-                  printf("VALID, TYPE IS FLOAT\n");
-                else if($$ == 2)
-                  printf("VALID, TYPE IS INT\n");
-                else if($$ == 1)
-                  printf("VALID, TYPE IS CHAR\n");
-              }
-      ;
-
-S:  E '=' E  {
-                if($1==4 || $3==4)
-                  $$=4;
-                else if($1==3 || $3==3)
-                  $$=3;
-                else if($1==2 || $3==2)
-                  $$=2;
-                else if($1==1 || $3==1)
-                  $$=1;
-              }
-  | E         {$$=$1;}
-;
-
-E: E '+' T  {
-              if($1==4 || $3==4)
-                $$=4;
-              else if($1==3 || $3==3)
-                $$=3;
-              else if($1==2 || $3==2)
-                $$=2;
-              else if($1==1 || $3==1)
-                $$=1;
-            }
-  |E '-' T  {
-              if($1==4 || $3==4)
-                $$=4;
-              else if($1==3 || $3==3)
-                $$=3;
-              else if($1==2 || $3==2)
-                $$=2;
-              else if($1==1 || $3==1)
-                $$=1;
-            }
-  |T        {$$=$1;}
-  ;
-
-T: T '*' F  {
-              if($1==4 || $3==4)
-                $$=4;
-              else if($1==3 || $3==3)
-                $$=3;
-              else if($1==2 || $3==2)
-                $$=2;
-              else if($1==1 || $3==1)
-                $$=1;
-            }
-  |T '/' F  {
-              if($1==4 || $3==4)
-                $$=4;
-              else if($1==3 || $3==3)
-                $$=3;
-              else if($1==2 || $3==2)
-                $$=2;
-              else if($1==1 || $3==1)
-                $$=1;
-            }
-  |F        {$$=$1;}
-  ;
-
-F:  '(' E ')'   {$$=$2;}
-   |INTCONST    {$$=$1;}
-   |FRACCONST   {$$=$1;}
-   |CHARCONST   {$$=$1;}
-   |OTHER       {$$=$1;}
-   ;
-
-%%
-int main()
-{
-    yyparse();
-    //return 0;
-}
-int yyerror(char *s)
-{
-    //printf("error:%s",s);
-}
-int yywrap()
-{
-  return(1);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//stack
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-struct active
-{
-  int ret,no;
-  char pt[50];
-};
-
-struct active st[100];
-int top=0,flag=0,sp=2000;
-char fname[100];
-void push(struct active tmp)
-{
-	int i=0;
-	st[top]=tmp;
-	printf("\nENTRY %s function\nreturn address:%d\nno of parameters:%d\n",fname,st[top].ret,st[top].no);
-	printf("Type Of Parameters-");
-	printf("%s ",st[top].pt);
-	top++;
-	sp+=(sizeof(tmp));
-	printf("\nStack pointer address: %d\n",sp);
-}
-
-void pop()
-{
-	top--;
-	sp-=(sizeof(st[top]));
-}
-
-void disp()
-{
-	printf("\nEXIT %s function\nreturn address:%d\nno of parameters:%d\n",fname,st[top].ret,st[top].no);
-	printf("Type Of Parameters-");
-		printf("%s ",st[top].pt);
-	printf("\nStack pointer address: %d\n",sp);
-}
-void main()
-{
-	int i=0,j,n,lineno=100,k;
-	char s[1024][1024];
-	printf("Enter number of lines in the program: ");
-	scanf("%d",&n);
-	while(i<=n)
-	{
-	  gets(s[i++]);
-	}
-	printf("\nInitial stack pointer address: %d\n",sp);
-	for(j=1;j<=n;++j,lineno+=20)
-	{
-	  while(flag>0)
-	  {
-		pop();
- 		disp();
-		flag--;
-	  }
-	  if(strstr(s[j],"(") && strstr(s[j],"="))
-      {
-		struct active tmp;
-		tmp.ret=lineno+20;
-		tmp.no=0;
-		int pos=0;
-		int f=0;
-		for(k=0;k<strlen(s[j]);++k)
-		{
-		  if(s[j][k]==',')
-		  tmp.no++;
-		  if(s[j][k]=='=')
- 		  {
-			while(f==0)
-			{
-				k++;
-				if(s[j][k]=='(')
-				{
-					f=1;
-					break;
-				}
-				fname[pos++]=s[j][k];
-			}
-		  }
+                     }
+            else
+            {
+                temp+="80";
+                for(int i=plain.length()-1;i>=0;i--)
+                {
+                    temp+=Integer.toHexString(plain.charAt(i));
+                   
+                }
+                break;
+                 }
+            ind++;
+           
         }
-		fname[pos]='\0';
-		char params[30];
-		int j1,jj,pa;
-		for(j1=0;j1<n;++j1)
-		{
-			if(strstr(s[j1],fname)&&j1!=j)
-			{
-				for(jj=0;jj<strlen(s[j1]);jj++)
-				{
-					
-					if(s[j1][jj]=='(')
-					{
-						pa=0;
-						jj++;
-						while(s[j1][jj]!=')')
-							params[pa++]=s[j1][jj++];
-						params[pa]='\0';
-						strcpy(tmp.pt,params);
-						
-					}
-						
-				}	
-			}
-		}
-		  if(tmp.no!=0)
-			tmp.no++;
-		  push(tmp);
-		  flag++;
-	  }
-	  
-	}
+       
+           
+        String temp2="",str2="",str1="";
+        ind=0;
+        while(true)  
+        {
+            str2="";
+          
+            if(temp.length()>8)
+            {
+                str1=temp.substring(0,8);
+                temp=temp.substring(8);
+            }
+            else
+            {
+                str1=temp.substring(0);
+                temp="";
+            }
+           
+            
+           
+            for(int j=0;j<str1.length();j++)
+            {
+            String s=Integer.toBinaryString(Integer.parseInt(str1.charAt(j)+"", 16));
+         
+            s1="";
+            if(s.length()<4)
+            {  
+                for(int k=0;k<4-s.length();k++)                
+                    s1+='0';
+               
+            }
+            str2+=s1+s;
+           
+            }
+                      
+            if(str2.length()<32)
+            {
+                for(int k=0;k<32-str2.length();k++)
+                temp2+='0';
+            }
+                    
+           temp2+=str2;
+           ind++;
+           if(temp.length()==0)
+               break;
+        }
+       
+        length=copy.length()*8;
+        int n=temp2.length()/448;
+        int x=(512*(n+1)-64)-temp2.length();
+       for(int i=0;i<x;i++)
+          temp2+='0';
+        temp1="";
+        String s=Integer.toBinaryString(length);
+        for(int i=0;i<32-s.length();i++)
+        {
+            temp1+='0';
+        }
+        temp1+=s;
+        for(int i=0;i<32;i++)
+            temp1+='0';
+
+        return temp2+temp1;
+    }
+          static  String[] buffer=new String[4];
+
+     
+   public static void init_buffers()
+   {
+       String init="",result="",temp="";;
+            buffer[0]="";buffer[1]="";buffer[2]="";buffer[3]="";
+            init="67452301";
+        for(int i=0;i<init.length();i++)
+        {
+            result="";
+            char  c=init.charAt(i);
+            temp= Integer.toBinaryString(Integer.parseInt(c+"",16))+"";
+            for(int j=0;j<(4-temp.length());j++)
+                result+='0';
+           
+            result+=temp;
+            temp="";
+            buffer[0]+=result;
+           
+        }
+        init="EFCDAB89";
+       for(int i=0;i<init.length();i++)
+        {
+           result="";
+           char  c=init.charAt(i);
+            temp= Integer.toBinaryString(Integer.parseInt(c+"",16))+"";
+            for(int j=0;j<(4-temp.length());j++)
+                result+='0';
+           
+            result+=temp;
+            temp="";
+            buffer[1]+=result;  
+        }
+
+        init="98BADCFE";
+       for(int i=0;i<init.length();i++)
+        {
+            result="";
+           char  c=init.charAt(i);
+            temp= Integer.toBinaryString(Integer.parseInt(c+"",16))+"";
+            for(int j=0;j<(4-temp.length());j++)
+                result+='0';
+           
+            result+=temp;
+            temp="";
+            buffer[2]+=result;
+        }
+        init="10325476";
+       for(int i=0;i<init.length();i++)
+        {
+            result="";
+           char  c=init.charAt(i);
+            temp= Integer.toBinaryString(Integer.parseInt(c+"",16))+"";
+            for(int j=0;j<(4-temp.length());j++)
+                result+='0';
+           
+            result+=temp;
+            temp="";
+            buffer[3]+=result;
+        }
+       init_A=new BigInteger(buffer[0],2);
+       init_B= new BigInteger(buffer[1], 2);
+       init_C=new BigInteger(buffer[2], 2);
+       init_D= new BigInteger(buffer[3], 2);
+       }
+   
+   
+   
+   public static String encryption(String plain_txt)
+   {
+       String[] x=new String[16];
+        for(int i=0;i<16;i++)
+        {
+            x[i]="";
+            x[i]=plain_txt.substring(i*32,(i*32)+32);
+               }
+
+        int shifts=0;
+        int num_blocks=plain_txt.length()/512;
+        int ind=0,ind1=0,ind2=0;
+        String A="",B="",C="",D="";
+        for(int block=0;block<num_blocks;block++)
+        {   String temp1="";
+            char ch='F';
+            shifts=ind1;
+            for(int i=0;i<4;i++)
+            {
+                 ind1+=4;
+                 String index="0123";
+                for(int j=0;j<16;j++)
+                {     
+                    if(ch=='F')
+                    temp1=binary_ADD(buffer[index.charAt(0)-'0'], func_F(buffer[index.charAt(1)-'0'], buffer[index.charAt(2)-'0'], buffer[index.charAt(3)-'0']));
+                    else if(ch=='G')
+                     temp1=binary_ADD(buffer[index.charAt(0)-'0'], func_G(buffer[index.charAt(1)-'0'], buffer[index.charAt(2)-'0'], buffer[index.charAt(3)-'0']));
+                    else if(ch=='H')
+                    temp1=binary_ADD(buffer[index.charAt(0)-'0'], func_H(buffer[index.charAt(1)-'0'], buffer[index.charAt(2)-'0'], buffer[index.charAt(3)-'0']));
+                    else if(ch=='I')
+                    temp1=binary_ADD(buffer[index.charAt(0)-'0'], func_I(buffer[index.charAt(1)-'0'], buffer[index.charAt(2)-'0'], buffer[index.charAt(3)-'0']));    
+                   
+                    temp1=binary_ADD(temp1, x[k[ind]]);
+                    temp1=binary_ADD(temp1, T[ind]);
+                    temp1=temp1.substring(shift[shifts])+temp1.substring(0, shift[shifts]);
+                   
+                   buffer[index.charAt(0)-'0']=binary_ADD(temp1, buffer[index.charAt(1)-'0']);              
+                     if(ind1-shifts==1)
+                         shifts-=3;
+                     else
+                         shifts++;
+                     ind++;
+                     index=index.substring(3)+index.substring(0,3);
+                }
+                ch++;
+                shifts+=4;                            
+            }
+        }
+        BigInteger temp1=new BigInteger(buffer[0],2);
+        BigInteger temp2=new BigInteger(buffer[1],2);
+        BigInteger temp3=new BigInteger(buffer[2],2);
+        BigInteger temp4=new BigInteger(buffer[3],2);
+       
+        init_A=init_A.add(temp1);
+        init_B= init_B.add(temp2);
+        init_C= init_C.add(temp3);
+        init_D= init_D.add(temp4);
+
+        String[] final_buffer=new String[4];
+        final_buffer[0]=new BigInteger(init_A.toString(),10).toString(16);        
+        final_buffer[1]=new BigInteger(init_B.toString(),10).toString(16);        
+       final_buffer[2]=new BigInteger(init_C.toString(),10).toString(16);        
+         final_buffer[3]=new BigInteger(init_D.toString(),10).toString(16);
+       
+         System.out.println("Final Buffers");
+        for(int i=0;i<4;i++)
+        {
+            if(final_buffer[i].length()==9)
+                final_buffer[i]=final_buffer[i].substring(1);
+            System.out.println("Buffer "+(i+1)+" "+final_buffer[i]);
+        }
+        String result="",str2="";
+         
+        for(int i=0;i<4;i++)
+        {ind=0;
+            String str=new StringBuffer(final_buffer[i]).reverse().toString();
+               // System.out.println(str);
+                str2="";
+            for(int j=0;j<final_buffer[i].length()/2;j++)
+            {
+               
+                String t=new StringBuffer(final_buffer[i].substring(ind, ind+2)).reverse().toString();
+                //System.out.println(t);
+                str2+=t;
+               ind+=2;
+            }
+            result+=new StringBuffer(str2).reverse().toString();
+                 }
+return result;
+   }
+   
+    public static void main(String[] args) {
+        String plain_txt="";
+               Scanner s=new Scanner(System.in);
+        plain_txt=conv_hex_plain(s.nextLine());
+             init_buffers();
+              
+            System.out.println(encryption(plain_txt));
+             
+    }
+   
 }
 
 
 
 
+\\11 *************************************************
+
+import java.math.BigInteger;
+import java.util.Scanner;
 
 
+public class Sha1 {
 
+    public static String[] init_const={
+        "67452301", "efcdab89",
+        "98badcfe","10325476","c3d2e1f0"
+    };
+       
 
-
-
-
-
-
-//codeopt1
-#include<stdio.h>
-#include<stdlib.h>
-int main()
-{
-  int i,s;
-  char c;
-  char TAC[10][10];
-  printf("Input  :");
-  for(i=0;i<2;i++)
-    scanf("%s",TAC[i]);
-  printf("\nGiven Sequence :");
-  for(i=0;i<2;i++)
-    printf("\n%s",TAC[i]);
-
-  for(i=0;i<2;i++)
-  {
-  s=TAC[i][2]-48+TAC[i][4]-48;
-  c=s+48;
-  TAC[i][2]=c;
-  TAC[i][3]='\0';
-  }
-  printf("\nOptimized Sequence :");
-  for(i=0;i<2;i++)
-    printf("\n%s",TAC[i]);
-
-}
-
-
-
-//codeopt2
-#include<stdio.h>
-#include<stdlib.h>
-int main()
-{
-  int i,s;
-  char c;
-  char Seq[10][10];
-  printf("Input :");
-  for(i=0;i<2;i++)
-    scanf("%s",Seq[i]);
-  printf("\nGiven Sequences :");
-  for(i=0;i<2;i++)
-    printf("\n%s",Seq[i]);
-
-    for(i=0;i<2;i++)
+     public static String xor(String x,String y)
     {
-       if((Seq[i][3]=='+') && (Seq[i][2]=='0'|| Seq[i][4]=='0'))
-      {     
-    if(Seq[i][2]=='0')
-      {     
-     Seq[i][2]=Seq[i][4];
-       Seq[i][3]='\0';
-      }
-    if(Seq[i][4]=='0')
-      {     
-     
-       Seq[i][3]='\0';
+        String temp="";
+        for(int i=0;i<x.length();i++)
+        {
+       
+        if(x.charAt(i)=='0'&&y.charAt(i)=='1'||x.charAt(i)=='1'&&y.charAt(i)=='0')
+            temp+='1';
+        else
+            temp+='0';  
+        }
+        return temp;  
     }
-   }   
-
-   if((Seq[i][3]=='-') && (Seq[i][2]=='0'|| Seq[i][4]=='0'))
-      {     
-    if(Seq[i][2]=='0')
-      {     
-     Seq[i][2]=Seq[i][4];
-       Seq[i][3]='\0';
-      }
-    if(Seq[i][4]=='0')
-      {     
-     
-       Seq[i][3]='\0';
+        public static String AND(String x,String y)
+    {
+        String temp="";
+        for(int i=0;i<x.length();i++)
+        {
+        if((x.charAt(i)=='0' && y.charAt(i)=='0')||(x.charAt(i)=='0'&&y.charAt(i)=='1')||(x.charAt(i)=='1'&&y.charAt(i)=='0'))
+            temp+= '0';
+        else
+            temp+= '1';
+        }
+         return temp;
     }
-   }   
-}
-   printf("\nOptimized Sequences :");
-   for(i=0;i<2;i++)
-    printf("\n%s",Seq[i]);
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-//DAG.c
-#include<stdio.h>
-struct node{
-char val,label[10];
-int count;
-struct node *l,*r;
-};
-int main()
-{
-	char a[30][30];
-	int n;
-	struct node *l[30];
-	int i,j,c=0;	
-	printf("Enter number of statements:");
-	scanf("%d",&n);
-	printf("Enter the TAC statements:");
-	for(i=0;i<n;i++)
-		scanf("%s",a[i]);
-	struct node *o1=malloc(sizeof(struct node));
-	o1->val=a[0][2];
-	o1->l=o1->r=NULL;
-	o1->count=0;
-	o1->label[o1->count++]=a[0][2];
-	l[c++]=o1;
-
-	struct node *o2=malloc(sizeof(struct node));
-	o1->val=a[0][4];
-	o2->l=o2->r=NULL;
-	l[c++]=o2;
-	o2->count=0;
-	o2->label[o2->count++]=a[0][4];
-	
-	struct node *o3=malloc(sizeof(struct node));
-	o3->val=a[0][3];
-	o3->l=o1;
-	o3->r=o2;
-	o3->count=0;
-	o3->label[o3->count++]=a[0][0];
-	l[c++]=o3;
-	
-	printf("Node %c Created At %ld With Left Child %c with Address:%ld and Right Child %c with Address:%ld\n",o3->val,o3,o3->l->label[0],o3->l,o3->r->label[0],o3->r);		
-//	printf("l[0]->label[0]:%c",l[0]->label[0]);
-	for(i=1;i<n;i++)
-	{
-		struct node *o=malloc(sizeof(struct node));
-		o->val=a[i][3];
-		o->l=o->r=NULL;
-		o->count=0;
-		o->label[o->count++]=a[i][0];
-		l[c++]=o;
-		int left=0,right=0,li=-1,ri=-1;
-				
-		for(j=0;j<c;j++)
-		{
-			if(l[j]->label[0]==a[i][2])
-			{
-				
-				//printf("Hello Left");
-				o->l=l[j];
-				left=1;
-				li=j;
-			}
-			if(l[j]->label[0]==a[i][4])
-			{
-
-				//printf("Hello Right");
-				o->r=l[j];
-				right=1;
-				ri=j;
-			}
-		}
-		if(!left)
-		{
-			//Create Left Node
-			struct node *o1=malloc(sizeof(struct node));
-			o1->val=a[i][2];
-			o1->l=o1->r=NULL;
-			o1->count=0;
-			o1->label[o1->count++]=a[i][2];
-			l[c++]=o1;
-			o->l=o1;
-		}
-		if(!right)
-		{
-			//Create Right Node
-			struct node *o1=malloc(sizeof(struct node));
-			o1->val=a[i][4];
-			o1->l=o1->r=NULL;
-			o1->label[o1->count++]=a[i][4];
-			o1->count=0;
-			l[c++]=o1;
-			o->r=o1;
-		}
-		if(left&&right&&ri==li)
-		{
-				l[ri]->label[l[ri]->count++]=a[i][3];
-				free(o);
-				c--;
-				
-		}
-		else
-			{
-				printf("Node %c Created At %ld With Left Child %c with Address:%ld and Right Child %c with Address:%ld\n",o->val,o,o->l->label[0],o->l,o->r->label[0],o->r);					
-			}		
-	}
-}
-
-
-
-
-
-
-
-
-
-//genkill.c
-#include<stdio.h>
-struct block
-{
-	char def[30][30];
-	int nod;
-	int *gen,*kill;
-	int *in,*out;
-};
-int a[30][30],am[30][30];	
-struct block *b;
-int n,tnod=0,index=0,noe,b1,b2;
-int visited[10];
-
-void search(int node,int nodea)
-{
-	visited[node]=1;	
-	a[nodea][node]=1;
-	for(int j=0;j<n;j++)
-		if(visited[j]==0&&a[node][j]==1)
-			search(j,nodea);	
-}
+    public static String OR(String x,String y)
+    {
+        String temp="";
+        for(int i=0;i<x.length();i++)
+        {
+        if(x.charAt(i)=='0'&&y.charAt(i)=='0')
+            temp+= '0';
+        else
+            temp+= '1';
+        }
+        return temp;
+    }
+    public static String NOT(String x)
+    {
+        String temp="";
+        for(int i=0;i<x.length();i++)
+        {
+            if(x.charAt(i)=='0')
+            temp+= '1';
+            else
+           temp+= '0';            
+        }
+     
+        return temp;
+    }
+   
+    public static String[] buffers=new String[32];
+    public static void init()
+    {
+        System.out.println("Five Buffers:");
+        char c='A';
+        for(int i=0;i<5;i++)
+        {
+            String s=init_const[i];
+            String s2="";
+            buffers[i]="";
  
-int main()
-{
-	printf("Enter number of blocks:");
-	scanf("%d",&n);	
-	b=malloc(n*sizeof(struct block));			
-	
-		for(int i=0;i<n;i++)
-		for(int j=0;j<n;j++)
-			a[i][j]=0;
-	for(int i=0;i<n;i++)
-	{
-		printf("Enter number of definitions in Block B%d:",i+1);
-		scanf("%d",&b[i].nod);
-		printf("Enter the definitions in Block B%d:\n",i+1);
-		for(int j=0;j<b[i].nod;j++)
-			scanf("%s",b[i].def[j]);
-		tnod+=b[i].nod;	
-	}
-	for(int i=0;i<n;i++)
-	{
-		b[i].gen=malloc(tnod*sizeof(int));
-		b[i].kill=malloc(tnod*sizeof(int));
-		b[i].in=malloc(tnod*sizeof(int));
-		b[i].out=malloc(tnod*sizeof(int));
-		for(int j=0;j<tnod;j++)
-			b[i].gen[j]=b[i].kill[j]=0;	
-	}
-	//Working on GEN
-	for(int i=0;i<n;i++)
-	{
-		for(int j=0;j<b[i].nod;j++)
-		{
-			b[i].gen[index+j]=1;
-		}
-		index+=b[i].nod;
-				
-	}
-	//Working on KILL
-	printf("Enter number of edges:");
-	scanf("%d",&noe);
-	for(int i=0;i<noe;i++)
-	{
-		printf("Enter the Edge %d:",i+1); 	
-		scanf("%d%d",&b1,&b2);
-		a[b1-1][b2-1]=1;
-		am[b1-1][b2-1]=1;
-	}						
-	//Adjacency Matrix in a
-	char temp;
-	for(int i=0;i<n;i++)
-	{
-		//printf("\nReachability from %d:",i+1);
-		for(int j=0;j<n;j++)
-					visited[j]=0;
-			search(i,i);
-	}
-	for(int i=0;i<n;i++)
-	{	
-		for(int i1=0;i1<b[i].nod;i1++)
-		{
-		int nnod=0;
-		for(int j=0;j<n;j++)
-		{	
-			if(a[i][j]==1&&i!=j)
-			{
-				for(int k=0;k<b[j].nod;k++)
-					if(b[j].def[k][0]==b[i].def[i1][0])
-						b[i].kill[nnod+k]=1;
-						
-			}
-			
-			nnod+=b[j].nod;
-		}
-		
-		}
-	}
-	//Printing GEN
-	printf("\nGEN:\n");
-	for(int i=0;i<n;i++)
-	{
-		printf("\nBLOCK %d:",i+1);
-		for(int j=0;j<tnod;j++)
-			printf("%d",b[i].gen[j]);
-	}
-	printf("\nKILL:\n");
-	//Printing KILL
-	for(int i=0;i<n;i++)
-	{
-		printf("\nBLOCK %d:",i+1);
-		for(int j=0;j<tnod;j++)
-			printf("%d",b[i].kill[j]);
-	}
+            for(int j=0;j<s.length();j++)
+            {
+                String s1=Integer.toBinaryString(Integer.parseInt(s.charAt(j)+"", 16));
+                if(s1.length()<4)
+                {
+                    for(int k=0;k<4-s1.length();k++)
+                        s2+='0';
+                }
+                buffers[i]+=s2+s1;
+                s2="";
+           
+        }
+            System.out.println((c++)+" "+buffers[i]);
+        }
+    }
+   
+    public static String function(int iteration_no,String B,String C,String D)
+    {
+        if(iteration_no>=0 && iteration_no<=19)
+        {
+            return OR((AND(B, C)),AND(NOT(B),D));
+                     
+        }
+        else if(iteration_no>=20 && iteration_no<=39)
+        {
+            return xor(xor(C, D), B);
+        }
+        else if(iteration_no>=40 && iteration_no<=59)
+                {
+                    return OR(OR( AND(B,C),AND(B,D)),AND(C,D));
+                }
+        else{
+            return xor(xor(C, D), B);
+           
+        }
+       
+    }
+    private static String[] k=new String[5];
+    static{
+        String x="5A827999";
+        String temp="";
+        for(int i=0;i<8;i++)
+        {
+            String s=Integer.toBinaryString(Integer.parseInt(x.charAt(i)+"", 16));
+                if(s.length()<4)
+                {  for(int l=0;l<4-s.length();l++)                    
+                        temp+='0';
+                }
+                temp+=s;            
+        }
+        k[0]=temp;
+        x="6ED9EBA1";
+        temp="";
+        for(int i=0;i<8;i++)
+        {
+            String s=Integer.toBinaryString(Integer.parseInt(x.charAt(i)+"", 16));
+                if(s.length()<4)
+                {  for(int l=0;l<4-s.length();l++)                    
+                        temp+='0';
+                }
+                temp+=s;            
+        }
+        k[1]=temp;
+        x="8F1BBCDC";
+        temp="";
+        for(int i=0;i<8;i++)
+        {
+            String s=Integer.toBinaryString(Integer.parseInt(x.charAt(i)+"", 16));
+                if(s.length()<4)
+                {  for(int l=0;l<4-s.length();l++)                    
+                        temp+='0';
+                }
+                temp+=s;            
+        }
+        k[2]=temp;
+        x="CA62C1D6";
+        temp="";
+        for(int i=0;i<8;i++)
+        {
+            String s=Integer.toBinaryString(Integer.parseInt(x.charAt(i)+"", 16));
+                if(s.length()<4)
+                {  for(int l=0;l<4-s.length();l++)                    
+                        temp+='0';
+                }
+                temp+=s;            
+        }
+        k[3]=temp;
+       
+       
+       
+    }
+    public static String constant_k(int iteration_no)
+    {
+   
+                if(iteration_no>=0 && iteration_no<=19)
+                    return k[0];
+                else if(iteration_no>=20 && iteration_no<=39)
+                    return k[1];
+                else if(iteration_no>=40 && iteration_no<=59)
+                    return k[2];
+                else
+                    return k[3];
+               
+    }
+   
+    public static String binary_ADD(String s1,String s2)
+    {
+      StringBuilder sb = new StringBuilder();
+    int i = s1.length() - 1, j = s2.length() -1, carry = 0;
+    while (i >= 0 || j >= 0) {
+        int sum = carry;
+        if (j >= 0) sum += s2.charAt(j--) - '0';
+        if (i >= 0) sum += s1.charAt(i--) - '0';
+        sb.append(sum % 2);
+        carry = sum / 2;
+    }
+       return sb.reverse().toString();
+           
+    }
+   
+    private static String[] message=new String[80];    
+   public static BigInteger[] init_buff=new BigInteger[5];
+   
+    public static String encryption(String[] message)
+    {
+         for(int i=0;i<5;i++)
+        {
+            init_buff[i]=new BigInteger(buffers[i], 2);
+        }
+         
+         String temp="",temp1="",temp2="",temp3="",temp4="";
+        for(int i=0;i<80;i++)
+        {
+            temp2=buffers[1];
+            temp3=buffers[2];
+            temp4=buffers[3];
+           
+            temp=binary_ADD(buffers[4],function(i,buffers[1], buffers[2], buffers[3]));
+            temp1=buffers[0].substring(5)+buffers[0].substring(0,5);
+            temp=binary_ADD(temp1, temp);
+            temp=binary_ADD(message[i], temp);
+            temp1=buffers[0];
+            buffers[0]=binary_ADD(constant_k(i), temp);
+            buffers[1]=temp1;
+            buffers[2]=temp2.substring(30)+temp2.substring(0,30);
+            buffers[3]=temp3;
+            buffers[4]=temp4;
+           
+          }
+       
+        for(int i=0;i<5;i++)
+        {
+           
+            buffers[i]=init_buff[i].add(new BigInteger(buffers[i], 2)).toString(16);
+           
+        }
+        return buffers[0]+buffers[1]+buffers[2]+buffers[3]+buffers[4];
+    }
+   
+    public static void main(String[] args) {
+        
+        System.out.println("Enter the plaintxt: ");
+        Scanner s=new Scanner(System.in);
+        init();
+        String plain_txt="";
+        plain_txt=con_txt(s.nextLine());
+       
+        for(int i=0;i<16;i++)
+        {
+            message[i]=plain_txt.substring(i*32,(i+1)*32);
+            //System.out.println(message[i]);
+        }
+       
+        for(int i=16;i<80;i++)
+        {
+           
+           String temp=xor(xor(xor(message[i-3],message[i-8]),message[i-14]),message[i-16]);
+           message[i]=temp.substring(1)+temp.charAt(0);    
+        }
+                      
+      String hash= encryption(message);
+        System.out.println(hash);
+       
+    }
 
-	//Initialialize
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//codeconver
-#include<stdio.h>
-char a[30][30];
-char reg[6],add[30][2];	
-int n;
-
-int isop(char a)
-{
-	switch(a)
- {
-		case '+':
-		case '-':
-		case '*':
-		case '/':return 1;
-		default:return 0;
-	}
-}
-int findop(char a)
-{
-	switch(a)
- {
-		case '+':printf("ADD ");break;
-		case '-':printf("SUB ");break;
-		case '*':printf("MUL ");break;
-		case '/':printf("DIV ");break;
-	}
-}
-void comp(int i)
-{
-	int i1,ind=-1;
-	for(i1=0;i1<6;i1++)
-	{	
-		if(reg[i1]==a[i][2])
-			ind=i1;
-	}
-	if(ind==-1)	
-	{
-		for(i1=0;i1<6;i1++)
-		{		
-			if(reg[i1]=='0')
-			{
-				ind=i1;
-				reg[ind]=a[i][2];
-				break;
-			}
-		}
-	}
-	printf("MOV %c,%c\n",a[i][2],ind+'A');
-	findop(a[i][3]);
- if(isdigit(a[i][4]))
-  printf("#%c,%c\n",a[i][4],ind+'A');
- else
-	printf("%c,%c\n",a[i][4],ind+'A');
-	printf("MOV %c,%c\n",i1+'A',a[i][0]);
-	reg[i1]=a[i][0];	
-}
-void assign(int i)
-{
-	if(isdigit(a[i][2]))
-	{
-		printf("MOV #%c,%c\n",a[i][2],a[i][0]);
-	}
-	else
-	{
-		int inr=-1;
-		for(int i1=0;i1<6;i1++)
-		{
-			if(reg[i1]==a[i][2])
-			{
-				inr=i1;
-				break;
-			}				
-		}
-		if(inr==-1)
-		{	for(int i1=0;i1<6;i1++)
-				{
-					if(reg[i1]=='0')
-					{
-						inr=i1;
-						break;
-					}	
-				}
-			printf("MOV %c,%c\n",a[i][2],inr+'A');				
-		}
-		printf("MOV %c,%c\n",'A'+inr,a[i][0]);
-		reg[inr]=a[i][0];
-	}
-}
-void ifcondn(int i)
-{
-	int j,flag=-1;
-	for(j=0;j<6;j++)
-	{
-		if(reg[j]==a[i][3])
-		{
-			flag=j;
-			break;
-		}
-	}
-	if(flag==-1)
-	{	
-		for(j=0;j<6;j++)
-		{
-			if(reg[j]=='0')
-			{
-				printf("MOV %c,%c\n",a[i][3],j+'A');
-				reg[j]=a[i][3];
-				break;
-			}
-		}
-	}
-	if(isdigit(a[i][3]))
-		printf("CMP %c,#%c",j+'A',a[i][5]);
-	else
-		printf("CMP %c,%c",j+'A',a[i][5]);	
-	if(a[i][4]=='<')
-		printf("\nJL");
-	else if(a[i][4]=='>')
-		printf("\nJG");
-	if(a[i][5]=='=')
-		printf("E");
-	for(j=0;a[i][j+1]!='\0';j++);
-	printf(" %c",a[i][j]);
-}
-void uncondn(int i)
-{
-	printf("\nJMP %c\n",a[i][strlen(a[i])-1]);
-}
-int main()
-{
-	for(int i=0;i<6;i++)
-		reg[i]='0';
-	printf("Number of TAC statements:");
-	scanf("%d",&n);
-	printf("Enter TAC statements:\n");	
-	for(int i=0;i<n;i++)
-	{	
-		printf("%d:",i);
-		scanf("%s",a[i]);
-	}	
-	printf("\nTarget Code:\n");
-	for(int i=0;i<n;i++)
-	{
-		//Line By Line
-		if(isop(a[i][3]))
-			comp(i);
-		else if(a[i][3]=='\0')
-			assign(i);		
-		else if(strstr(a[i],"if"))
-				ifcondn(i);
-		else if(strstr(a[i],"goto"))
-			uncondn(i);	
-	}
-	printf("\nRegister:\n");
-	for(int i=0;i<6;i++)
-		printf("%c:%c\n",i+'A',reg[i]);
+    private static String con_txt(String plain) {
+       
+         String temp1="",temp2="",copy=plain,temp3="";
+    while(true)
+    {
+        if(plain.length()>4)
+        {
+            String s=plain.substring(0,4);
+            for(int i=0;i<s.length();i++)
+            {
+                temp1+=Integer.toHexString(s.charAt(i));
+            }
+            plain=plain.substring(4);
+             }
+        else if(plain.length()==4)
+        {
+            String s=plain.substring(0);
+            for(int i=0;i<s.length();i++)
+            {
+                temp1+=Integer.toHexString(s.charAt(i));
+            }
+            plain="";
+        }
+        else
+        {
+            if(plain.length()>0)
+            {
+                String s=plain.substring(0);
+                for(int i=0;i<s.length();i++)
+            {
+                temp1+=Integer.toHexString(s.charAt(i));
+            }
+               }
+        temp1+="80";
+            break;
+        } 
+    }
+        System.out.println("Converted Text: "+temp1);
+        String str;
+        for(int i=0;i<temp1.length();i++)
+        {          
+                String s=Integer.toBinaryString(Integer.parseInt(temp1.charAt(i)+"", 16));
+              
+                if(s.length()<4)
+                {
+                  for(int l=0;l<4-s.length();l++)
+                    {
+                        temp2+='0';
+                    }
+                }
+                temp2+=s;            
+        }
+       
+        int x=448-temp2.length();
+        for(int i=0;i<x;i++)
+                   temp2+='0';
+       
+        int len=copy.length();
+        len*=8;
+        String s=Integer.toBinaryString(len);
+        for(int i=0;i<64-s.length();i++)
+            temp2+='0';
+        temp2+=s;
+           
+       
+    return temp2;
+    }
+   
 }
